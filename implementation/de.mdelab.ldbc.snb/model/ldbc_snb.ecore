@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="ldbc_snb" nsURI="de.mdelab.ldbc_snb" nsPrefix="de.mdelab.ldbc_snb">
+  <eClassifiers xsi:type="ecore:EClass" name="IdentifiedElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DynamicElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="cts" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="dts" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Person" eSuperTypes="#//IntegerIdentifiedElement #//IdentifiedElement #//DynamicElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="creationDate" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="firstName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="lastName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="gender" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="birthday" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="email" lowerBound="1" upperBound="-1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="speaks" lowerBound="1"
+        upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="browserUsed" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="locationIP" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="knows" ordered="false"
+        upperBound="-1" eType="#//KnowsLink" eOpposite="#//KnowsLink/oppKnows"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hasInterest" ordered="false"
+        upperBound="-1" eType="#//Tag" eOpposite="#//Tag/oppHasInterest"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="likes" ordered="false"
+        upperBound="-1" eType="#//LikesLink" eOpposite="#//LikesLink/oppLikes"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="workAt" ordered="false"
+        upperBound="-1" eType="#//WorkAtLink" eOpposite="#//WorkAtLink/oppWorkAt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="studyAt" ordered="false"
+        upperBound="-1" eType="#//StudyAtLink" eOpposite="#//StudyAtLink/oppStudyAt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="isLocatedIn" lowerBound="1"
+        eType="#//City" eOpposite="#//City/oppPersonIsLocatedIn"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="oppHasMember" upperBound="-1"
+        eType="#//HasMemberLink" eOpposite="#//HasMemberLink/hasMember"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="oppHasCreator" ordered="false"
+        upperBound="-1" eType="#//Message" eOpposite="#//Message/hasCreator"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="oppKnows" upperBound="-1"
+        eType="#//KnowsLink" eOpposite="#//KnowsLink/knows"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="oppHasModerator" upperBound="-1"
+        eType="#//Forum" eOpposite="#//Forum/hasModerator"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Organisation" eSuperTypes="#//IdentifiedElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="University" eSuperTypes="#//Organisation">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="isLocatedIn" lowerBound="1"
+        eType="#//City" eOpposite="#//City/oppUniversityIsLocatedIn"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="oppStudyAt" upperBound="-1"
+        eType="#//StudyAtLink" eOpposite="#//StudyAtLink/studyAt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Company" eSuperTypes="#//Organisation">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="isLocatedIn" lowerBound="1"
+        eType="#//Country" eOpposite="#//Country/oppCompanyIsLocatedIn"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="oppWorkAt" upperBound="-1"
+        eType="#//WorkAtLink" eOpposite="#//WorkAtLink/workAt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Place" eSuperTypes="#//IdentifiedElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="City" eSuperTypes="#//Place">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="isPartOf" lowerBound="1"
+        eType="#//Country" eOpposite="#//Country/oppIsPartOf"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="oppPersonIsLocatedIn" upperBound="-1"
+        eType="#//Person" eOpposite="#//Person/isLocatedIn"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="oppUniversityIsLocatedIn"
+        upperBound="-1" eType="#//University" eOpposite="#//University/isLocatedIn"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Country" eSuperTypes="#//Place">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="isPartOf" lowerBound="1"
+        eType="#//Continent" eOpposite="#//Continent/oppIsPartOf"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="oppIsPartOf" upperBound="-1"
+        eType="#//City" eOpposite="#//City/isPartOf"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="oppCompanyIsLocatedIn"
+        upperBound="-1" eType="#//Company" eOpposite="#//Company/isLocatedIn"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="oppMessageIsLocatedIn"
+        upperBound="-1" eType="#//Message" eOpposite="#//Message/isLocatedIn"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Continent" eSuperTypes="#//Place">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="oppIsPartOf" upperBound="-1"
+        eType="#//Country" eOpposite="#//Country/isPartOf"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Forum" eSuperTypes="#//IdentifiedElement #//DynamicElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="title" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="creationDate" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hasModerator" lowerBound="1"
+        eType="#//Person" eOpposite="#//Person/oppHasModerator"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hasTag" ordered="false"
+        upperBound="-1" eType="#//Tag" eOpposite="#//Tag/oppForumHasTag"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hasMember" upperBound="-1"
+        eType="#//HasMemberLink" eOpposite="#//HasMemberLink/oppHasMember"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="oppContainer" ordered="false"
+        lowerBound="1" upperBound="-1" eType="#//Post" eOpposite="#//Post/container"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Message" eSuperTypes="#//IdentifiedElement #//DynamicElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="creationDate" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="browserUsed" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="locationIP" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="content" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="length" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="isLocatedIn" lowerBound="1"
+        eType="#//Country" eOpposite="#//Country/oppMessageIsLocatedIn"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hasTag" ordered="false"
+        upperBound="-1" eType="#//Tag" eOpposite="#//Tag/oppMessageHasTag"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hasCreator" eType="#//Person"
+        eOpposite="#//Person/oppHasCreator"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="oppLikes" upperBound="-1"
+        eType="#//LikesLink" eOpposite="#//LikesLink/likes"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="oppReplyOf" upperBound="-1"
+        eType="#//Comment" eOpposite="#//Comment/replyOf"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Post" eSuperTypes="#//Message #//IntegerIdentifiedElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="language" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="imageFile" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="successor" eType="#//Post"
+        eOpposite="#//Post/oppSuccessor"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="linkedPosts" ordered="false"
+        upperBound="-1" eType="#//Post" eOpposite="#//Post/oppLinkedPosts"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="container" eType="#//Forum"
+        eOpposite="#//Forum/oppContainer"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="oppSuccessor" eType="#//Post"
+        eOpposite="#//Post/successor"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="oppLinkedPosts" upperBound="-1"
+        eType="#//Post" eOpposite="#//Post/linkedPosts"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Comment" eSuperTypes="#//Message">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="replyOf" lowerBound="1"
+        eType="#//Message" eOpposite="#//Message/oppReplyOf"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Tag" eSuperTypes="#//IntegerIdentifiedElement #//IdentifiedElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hasType" ordered="false"
+        upperBound="-1" eType="#//TagClass" eOpposite="#//TagClass/oppHasType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="oppMessageHasTag" upperBound="-1"
+        eType="#//Message" eOpposite="#//Message/hasTag"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="oppHasInterest" upperBound="-1"
+        eType="#//Person" eOpposite="#//Person/hasInterest"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="oppForumHasTag" upperBound="-1"
+        eType="#//Forum" eOpposite="#//Forum/hasTag"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TagClass" eSuperTypes="#//IdentifiedElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="isSubclassOf" ordered="false"
+        upperBound="-1" eType="#//TagClass" eOpposite="#//TagClass/oppIsSubclassOf"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="oppHasType" upperBound="-1"
+        eType="#//Tag" eOpposite="#//Tag/hasType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="oppIsSubclassOf" upperBound="-1"
+        eType="#//TagClass" eOpposite="#//TagClass/isSubclassOf"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="KnowsLink" eSuperTypes="#//DynamicElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="creationDate" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="knows" lowerBound="1" eType="#//Person"
+        eOpposite="#//Person/oppKnows"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="oppKnows" lowerBound="1"
+        eType="#//Person" eOpposite="#//Person/knows"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="StudyAtLink">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="classYear" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="studyAt" lowerBound="1"
+        eType="#//University" eOpposite="#//University/oppStudyAt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="oppStudyAt" lowerBound="1"
+        eType="#//Person" eOpposite="#//Person/studyAt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="WorkAtLink">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="workFrom" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="workAt" lowerBound="1"
+        eType="#//Company" eOpposite="#//Company/oppWorkAt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="oppWorkAt" lowerBound="1"
+        eType="#//Person" eOpposite="#//Person/workAt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="HasMemberLink" eSuperTypes="#//DynamicElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="joinDate" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hasMember" lowerBound="1"
+        eType="#//Person" eOpposite="#//Person/oppHasMember"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="oppHasMember" lowerBound="1"
+        eType="#//Forum" eOpposite="#//Forum/hasMember"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LikesLink" eSuperTypes="#//DynamicElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="creationDate" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="likes" lowerBound="1" eType="#//Message"
+        eOpposite="#//Message/oppLikes"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="oppLikes" eType="#//Person"
+        eOpposite="#//Person/likes"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="IntegerIdentifiedElement" abstract="true"
+      interface="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="intId" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LdbcSNBModel">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ownedPersons" ordered="false"
+        upperBound="-1" eType="#//Person" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="organisations" ordered="false"
+        upperBound="-1" eType="#//Organisation"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ownedUniversities" ordered="false"
+        upperBound="-1" eType="#//University" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ownedCompanies" ordered="false"
+        upperBound="-1" eType="#//Company" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ownedCities" ordered="false"
+        upperBound="-1" eType="#//City" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ownedCountries" ordered="false"
+        upperBound="-1" eType="#//Country" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ownedContinents" ordered="false"
+        upperBound="-1" eType="#//Continent" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ownedForums" ordered="false"
+        upperBound="-1" eType="#//Forum" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="messages" ordered="false"
+        upperBound="-1" eType="#//Message"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ownedPosts" ordered="false"
+        upperBound="-1" eType="#//Post" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ownedComments" ordered="false"
+        upperBound="-1" eType="#//Comment" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ownedTags" ordered="false"
+        upperBound="-1" eType="#//Tag" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ownedTagClasses" ordered="false"
+        upperBound="-1" eType="#//TagClass" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ownedKnowsLinks" ordered="false"
+        upperBound="-1" eType="#//KnowsLink" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ownedStudyAtLinks" ordered="false"
+        upperBound="-1" eType="#//StudyAtLink" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ownedWorkAtLinks" ordered="false"
+        upperBound="-1" eType="#//WorkAtLink" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ownedHasMemberLinks" ordered="false"
+        upperBound="-1" eType="#//HasMemberLink" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ownedLikesLinks" ordered="false"
+        upperBound="-1" eType="#//LikesLink" containment="true"/>
+  </eClassifiers>
+</ecore:EPackage>

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/de.mdelab.ldbc.snb/src" editDirectory="/de.mdelab.ldbc.snb.edit/src"
+    editorDirectory="/de.mdelab.ldbc.snb.editor/src" modelPluginID="de.mdelab.ldbc.snb"
+    modelName="ldbc_snb" rootExtendsInterface="fr.inria.atlanmod.neoemf.core.PersistentEObject"
+    rootExtendsClass="fr.inria.atlanmod.neoemf.core.DefaultPersistentEObject" reflectiveDelegation="true"
+    testsDirectory="/de.mdelab.ldbc.snb.tests/src" importerID="fr.inria.atlanmod.neoemf.eclipse.ui.importer.NeoModelImporter"
+    featureDelegation="Reflective" complianceLevel="7.0" copyrightFields="false" editPluginID="de.mdelab.ldbc.snb.edit"
+    editorPluginID="de.mdelab.ldbc.snb.editor" operationReflection="true" importOrganizing="true">
+  <foreignModel>ldbc_snb.ecore</foreignModel>
+  <modelPluginVariables>NEOEMF=fr.inria.atlanmod.neoemf.core</modelPluginVariables>
+  <genPackages prefix="Ldbc_snb" basePackage="de.mdelab" disposableProviderFactory="true"
+      ecorePackage="ldbc_snb.ecore#/">
+    <genClasses ecoreClass="ldbc_snb.ecore#//IdentifiedElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ldbc_snb.ecore#//IdentifiedElement/ID"/>
+    </genClasses>
+    <genClasses ecoreClass="ldbc_snb.ecore#//DynamicElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ldbc_snb.ecore#//DynamicElement/cts"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ldbc_snb.ecore#//DynamicElement/dts"/>
+    </genClasses>
+    <genClasses ecoreClass="ldbc_snb.ecore#//Person">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ldbc_snb.ecore#//Person/creationDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ldbc_snb.ecore#//Person/firstName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ldbc_snb.ecore#//Person/lastName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ldbc_snb.ecore#//Person/gender"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ldbc_snb.ecore#//Person/birthday"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ldbc_snb.ecore#//Person/email"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ldbc_snb.ecore#//Person/speaks"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ldbc_snb.ecore#//Person/browserUsed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ldbc_snb.ecore#//Person/locationIP"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ldbc_snb.ecore#//Person/knows"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ldbc_snb.ecore#//Person/knowsOpp"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ldbc_snb.ecore#//Person/hasInterest"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ldbc_snb.ecore#//Person/likes"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ldbc_snb.ecore#//Person/workAt"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ldbc_snb.ecore#//Person/studyAt"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ldbc_snb.ecore#//Person/isLocatedIn"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ldbc_snb.ecore#//Person/hasCreated"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ldbc_snb.ecore#//Person/isMember"/>
+    </genClasses>
+    <genClasses ecoreClass="ldbc_snb.ecore#//Organisation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ldbc_snb.ecore#//Organisation/name"/>
+    </genClasses>
+    <genClasses ecoreClass="ldbc_snb.ecore#//University">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ldbc_snb.ecore#//University/isLocatedIn"/>
+    </genClasses>
+    <genClasses ecoreClass="ldbc_snb.ecore#//Company">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ldbc_snb.ecore#//Company/isLocatedIn"/>
+    </genClasses>
+    <genClasses ecoreClass="ldbc_snb.ecore#//Place">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ldbc_snb.ecore#//Place/name"/>
+    </genClasses>
+    <genClasses ecoreClass="ldbc_snb.ecore#//City">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ldbc_snb.ecore#//City/isPartOf"/>
+    </genClasses>
+    <genClasses ecoreClass="ldbc_snb.ecore#//Country">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ldbc_snb.ecore#//Country/isPartOf"/>
+    </genClasses>
+    <genClasses ecoreClass="ldbc_snb.ecore#//Continent"/>
+    <genClasses ecoreClass="ldbc_snb.ecore#//Forum">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ldbc_snb.ecore#//Forum/title"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ldbc_snb.ecore#//Forum/creationDate"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ldbc_snb.ecore#//Forum/hasModerator"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ldbc_snb.ecore#//Forum/hasTag"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ldbc_snb.ecore#//Forum/containerOf"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ldbc_snb.ecore#//Forum/hasMember"/>
+    </genClasses>
+    <genClasses ecoreClass="ldbc_snb.ecore#//Message">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ldbc_snb.ecore#//Message/creationDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ldbc_snb.ecore#//Message/browserUsed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ldbc_snb.ecore#//Message/locationIP"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ldbc_snb.ecore#//Message/content"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ldbc_snb.ecore#//Message/length"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ldbc_snb.ecore#//Message/isLocatedIn"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ldbc_snb.ecore#//Message/hasTag"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ldbc_snb.ecore#//Message/hasCreator"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ldbc_snb.ecore#//Message/comments"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ldbc_snb.ecore#//Message/likes"/>
+    </genClasses>
+    <genClasses ecoreClass="ldbc_snb.ecore#//Post">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ldbc_snb.ecore#//Post/language"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ldbc_snb.ecore#//Post/imageFile"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ldbc_snb.ecore#//Post/successor"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ldbc_snb.ecore#//Post/linkedPosts"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ldbc_snb.ecore#//Post/container"/>
+    </genClasses>
+    <genClasses ecoreClass="ldbc_snb.ecore#//Comment">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ldbc_snb.ecore#//Comment/replyOf"/>
+    </genClasses>
+    <genClasses ecoreClass="ldbc_snb.ecore#//Tag">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ldbc_snb.ecore#//Tag/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ldbc_snb.ecore#//Tag/hasType"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ldbc_snb.ecore#//Tag/hasTagOpp"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ldbc_snb.ecore#//Tag/hasInterestOpp"/>
+    </genClasses>
+    <genClasses ecoreClass="ldbc_snb.ecore#//TagClass">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ldbc_snb.ecore#//TagClass/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ldbc_snb.ecore#//TagClass/isSubclassOf"/>
+    </genClasses>
+    <genClasses ecoreClass="ldbc_snb.ecore#//KnowsLink">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ldbc_snb.ecore#//KnowsLink/creationDate"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ldbc_snb.ecore#//KnowsLink/knows"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ldbc_snb.ecore#//KnowsLink/knowsOpp"/>
+    </genClasses>
+    <genClasses ecoreClass="ldbc_snb.ecore#//StudyAtLink">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ldbc_snb.ecore#//StudyAtLink/classYear"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ldbc_snb.ecore#//StudyAtLink/studyAt"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ldbc_snb.ecore#//StudyAtLink/person"/>
+    </genClasses>
+    <genClasses ecoreClass="ldbc_snb.ecore#//WorkAtLink">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ldbc_snb.ecore#//WorkAtLink/workFrom"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ldbc_snb.ecore#//WorkAtLink/workAt"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ldbc_snb.ecore#//WorkAtLink/person"/>
+    </genClasses>
+    <genClasses ecoreClass="ldbc_snb.ecore#//HasMemberLink">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ldbc_snb.ecore#//HasMemberLink/joinDate"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ldbc_snb.ecore#//HasMemberLink/forum"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ldbc_snb.ecore#//HasMemberLink/person"/>
+    </genClasses>
+    <genClasses ecoreClass="ldbc_snb.ecore#//LikesLink">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ldbc_snb.ecore#//LikesLink/creationDate"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ldbc_snb.ecore#//LikesLink/likes"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ldbc_snb.ecore#//LikesLink/person"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ldbc_snb.ecore#//LikesLink/likes2"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="ldbc_snb.ecore#//IntegerIdentifiedElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ldbc_snb.ecore#//IntegerIdentifiedElement/intId"/>
+    </genClasses>
+    <genClasses ecoreClass="ldbc_snb.ecore#//LdbcSNBModel">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ldbc_snb.ecore#//LdbcSNBModel/ownedPersons"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ldbc_snb.ecore#//LdbcSNBModel/organisations"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ldbc_snb.ecore#//LdbcSNBModel/ownedUniversities"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ldbc_snb.ecore#//LdbcSNBModel/ownedCompanies"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ldbc_snb.ecore#//LdbcSNBModel/ownedCities"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ldbc_snb.ecore#//LdbcSNBModel/ownedCountries"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ldbc_snb.ecore#//LdbcSNBModel/ownedContinents"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ldbc_snb.ecore#//LdbcSNBModel/ownedForums"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ldbc_snb.ecore#//LdbcSNBModel/messages"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ldbc_snb.ecore#//LdbcSNBModel/ownedPosts"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ldbc_snb.ecore#//LdbcSNBModel/ownedComments"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ldbc_snb.ecore#//LdbcSNBModel/ownedTags"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ldbc_snb.ecore#//LdbcSNBModel/ownedTagClasses"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ldbc_snb.ecore#//LdbcSNBModel/ownedKnowsLinks"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ldbc_snb.ecore#//LdbcSNBModel/ownedStudyAtLinks"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ldbc_snb.ecore#//LdbcSNBModel/ownedWorkAtLinks"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ldbc_snb.ecore#//LdbcSNBModel/ownedHasMemberLinks"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ldbc_snb.ecore#//LdbcSNBModel/ownedLikesLinks"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><plugin>
+  <extension id="de.mdelab.modisco.viatra.patterns.plain.DesignPatterns" point="org.eclipse.viatra.query.runtime.queryspecification">
+    <group group="org.eclipse.viatra.query.runtime.extensibility.SingletonExtensionFactory:de.mdelab.modisco.viatra.patterns.plain.DesignPatterns" id="de.mdelab.modisco.viatra.patterns.plain.DesignPatterns">
+      <query-specification fqn="de.mdelab.modisco.viatra.patterns.plain.Composite"/>
+      <query-specification fqn="de.mdelab.modisco.viatra.patterns.plain.Observer"/>
+      <query-specification fqn="de.mdelab.modisco.viatra.patterns.plain.Singleton"/>
+      <query-specification fqn="de.mdelab.modisco.viatra.patterns.plain.Strategy"/>
+      <query-specification fqn="de.mdelab.modisco.viatra.patterns.plain.Path1"/>
+      <query-specification fqn="de.mdelab.modisco.viatra.patterns.plain.Path2"/>
+      <query-specification fqn="de.mdelab.modisco.viatra.patterns.plain.Path3"/>
+      <query-specification fqn="de.mdelab.modisco.viatra.patterns.plain.Path4"/>
+    </group>
+  </extension>
+</plugin>

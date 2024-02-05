@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mlstorypatterns:StoryPattern xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:mlstorypatterns="http://www.mdelab.de/mlstorypatterns/1.0" uuid="_V8WuAMjLEemCGpCyx_UZ0Q" name="Interactive_3">
+  <storyPatternLinks xsi:type="mlstorypatterns:StoryPatternLink" uuid="_krvTkMjLEemCGpCyx_UZ0Q" source="_ZlafYMjLEemCGpCyx_UZ0Q" target="_eyhdcMjLEemCGpCyx_UZ0Q">
+    <feature xsi:type="ecore:EReference" href="de.mdelab.ldbc_snb#//Person/knows"/>
+  </storyPatternLinks>
+  <storyPatternLinks xsi:type="mlstorypatterns:StoryPatternLink" uuid="_lyh8gMjLEemCGpCyx_UZ0Q" source="_eyhdcMjLEemCGpCyx_UZ0Q" target="_f6FicMjLEemCGpCyx_UZ0Q">
+    <feature xsi:type="ecore:EReference" href="de.mdelab.ldbc_snb#//KnowsLink/knows"/>
+  </storyPatternLinks>
+  <storyPatternLinks xsi:type="mlstorypatterns:StoryPatternLink" uuid="_mrSwgMjLEemCGpCyx_UZ0Q" source="_f6FicMjLEemCGpCyx_UZ0Q" target="_gtWycMjLEemCGpCyx_UZ0Q">
+    <feature xsi:type="ecore:EReference" href="de.mdelab.ldbc_snb#//Person/knows"/>
+  </storyPatternLinks>
+  <storyPatternLinks xsi:type="mlstorypatterns:StoryPatternLink" uuid="_n0J2AMjLEemCGpCyx_UZ0Q" source="_gtWycMjLEemCGpCyx_UZ0Q" target="_it1ccMjLEemCGpCyx_UZ0Q">
+    <feature xsi:type="ecore:EReference" href="de.mdelab.ldbc_snb#//KnowsLink/knows"/>
+  </storyPatternLinks>
+  <storyPatternLinks xsi:type="mlstorypatterns:StoryPatternLink" uuid="_v0jbEMjLEemCGpCyx_UZ0Q" source="_it1ccMjLEemCGpCyx_UZ0Q" target="_sh9B4MjLEemCGpCyx_UZ0Q">
+    <feature xsi:type="ecore:EReference" href="de.mdelab.ldbc_snb#//Person/oppHasCreator"/>
+  </storyPatternLinks>
+  <storyPatternLinks xsi:type="mlstorypatterns:StoryPatternLink" uuid="_yCiWwcjLEemCGpCyx_UZ0Q" source="_sh9B4MjLEemCGpCyx_UZ0Q" target="_wpZYYMjLEemCGpCyx_UZ0Q">
+    <feature xsi:type="ecore:EReference" href="de.mdelab.ldbc_snb#//Message/isLocatedIn"/>
+  </storyPatternLinks>
+  <storyPatternLinks xsi:type="mlstorypatterns:StoryPatternLink" uuid="_ATiWAMjMEemCGpCyx_UZ0Q" source="_it1ccMjLEemCGpCyx_UZ0Q" target="_9smI8MjLEemCGpCyx_UZ0Q">
+    <feature xsi:type="ecore:EReference" href="de.mdelab.ldbc_snb#//Person/oppHasCreator"/>
+  </storyPatternLinks>
+  <storyPatternLinks xsi:type="mlstorypatterns:StoryPatternLink" uuid="_M-QVIMjMEemCGpCyx_UZ0Q" source="_9smI8MjLEemCGpCyx_UZ0Q" target="_LVdLUMjMEemCGpCyx_UZ0Q">
+    <feature xsi:type="ecore:EReference" href="de.mdelab.ldbc_snb#//Message/isLocatedIn"/>
+  </storyPatternLinks>
+  <storyPatternLinks xsi:type="mlstorypatterns:StoryPatternLink" uuid="_Fx9ZAVKjEeyC7vd3a-HHMA" source="_it1ccMjLEemCGpCyx_UZ0Q" target="_AVE5lVKjEeyC7vd3a-HHMA">
+    <feature xsi:type="ecore:EReference" href="de.mdelab.ldbc_snb#//Person/isLocatedIn"/>
+  </storyPatternLinks>
+  <storyPatternObjects xsi:type="mlstorypatterns:StoryPatternObject" uuid="_ZlafYMjLEemCGpCyx_UZ0Q" name="p1" outgoingLinks="_krvTkMjLEemCGpCyx_UZ0Q" bindingType="CAN_BE_BOUND">
+    <type xsi:type="ecore:EClass" href="de.mdelab.ldbc_snb#//Person"/>
+  </storyPatternObjects>
+  <storyPatternObjects xsi:type="mlstorypatterns:StoryPatternObject" uuid="_eyhdcMjLEemCGpCyx_UZ0Q" name="k1" outgoingLinks="_lyh8gMjLEemCGpCyx_UZ0Q" incomingLinks="_krvTkMjLEemCGpCyx_UZ0Q" bindingType="CAN_BE_BOUND">
+    <type xsi:type="ecore:EClass" href="de.mdelab.ldbc_snb#//KnowsLink"/>
+  </storyPatternObjects>
+  <storyPatternObjects xsi:type="mlstorypatterns:StoryPatternObject" uuid="_f6FicMjLEemCGpCyx_UZ0Q" name="p2" outgoingLinks="_mrSwgMjLEemCGpCyx_UZ0Q" incomingLinks="_lyh8gMjLEemCGpCyx_UZ0Q" bindingType="CAN_BE_BOUND">
+    <type xsi:type="ecore:EClass" href="de.mdelab.ldbc_snb#//Person"/>
+  </storyPatternObjects>
+  <storyPatternObjects xsi:type="mlstorypatterns:StoryPatternObject" uuid="_gtWycMjLEemCGpCyx_UZ0Q" name="k2" outgoingLinks="_n0J2AMjLEemCGpCyx_UZ0Q" incomingLinks="_mrSwgMjLEemCGpCyx_UZ0Q" bindingType="CAN_BE_BOUND">
+    <type xsi:type="ecore:EClass" href="de.mdelab.ldbc_snb#//KnowsLink"/>
+  </storyPatternObjects>
+  <storyPatternObjects xsi:type="mlstorypatterns:StoryPatternObject" uuid="_it1ccMjLEemCGpCyx_UZ0Q" name="p3" outgoingLinks="_v0jbEMjLEemCGpCyx_UZ0Q _ATiWAMjMEemCGpCyx_UZ0Q _Fx9ZAVKjEeyC7vd3a-HHMA" incomingLinks="_n0J2AMjLEemCGpCyx_UZ0Q" bindingType="CAN_BE_BOUND">
+    <type xsi:type="ecore:EClass" href="de.mdelab.ldbc_snb#//Person"/>
+  </storyPatternObjects>
+  <storyPatternObjects xsi:type="mlstorypatterns:StoryPatternObject" uuid="_sh9B4MjLEemCGpCyx_UZ0Q" name="m1" outgoingLinks="_yCiWwcjLEemCGpCyx_UZ0Q" incomingLinks="_v0jbEMjLEemCGpCyx_UZ0Q" bindingType="CAN_BE_BOUND">
+    <type xsi:type="ecore:EClass" href="de.mdelab.ldbc_snb#//Post"/>
+  </storyPatternObjects>
+  <storyPatternObjects xsi:type="mlstorypatterns:StoryPatternObject" uuid="_wpZYYMjLEemCGpCyx_UZ0Q" name="o1" incomingLinks="_yCiWwcjLEemCGpCyx_UZ0Q _19WQwVKiEeyC7vd3a-HHMA" bindingType="CAN_BE_BOUND">
+    <type xsi:type="ecore:EClass" href="de.mdelab.ldbc_snb#//Country"/>
+  </storyPatternObjects>
+  <storyPatternObjects xsi:type="mlstorypatterns:StoryPatternObject" uuid="_9smI8MjLEemCGpCyx_UZ0Q" name="m2" outgoingLinks="_M-QVIMjMEemCGpCyx_UZ0Q" incomingLinks="_ATiWAMjMEemCGpCyx_UZ0Q" bindingType="CAN_BE_BOUND">
+    <type xsi:type="ecore:EClass" href="de.mdelab.ldbc_snb#//Post"/>
+  </storyPatternObjects>
+  <storyPatternObjects xsi:type="mlstorypatterns:StoryPatternObject" uuid="_LVdLUMjMEemCGpCyx_UZ0Q" name="o2" incomingLinks="_M-QVIMjMEemCGpCyx_UZ0Q _WOkVYVKjEeyC7vd3a-HHMA" bindingType="CAN_BE_BOUND">
+    <type xsi:type="ecore:EClass" href="de.mdelab.ldbc_snb#//Country"/>
+  </storyPatternObjects>
+  <storyPatternObjects xsi:type="mlstorypatterns:StoryPatternObject" uuid="_AVE5lVKjEeyC7vd3a-HHMA" name="i1" outgoingLinks="_19WQwVKiEeyC7vd3a-HHMA _WOkVYVKjEeyC7vd3a-HHMA" incomingLinks="_Fx9ZAVKjEeyC7vd3a-HHMA" bindingType="CAN_BE_BOUND">
+    <type xsi:type="ecore:EClass" href="de.mdelab.ldbc_snb#//City"/>
+  </storyPatternObjects>
+  <negativeApplicationConditions uuid="_0mjc-FKiEeyC7vd3a-HHMA" name="nac1">
+    <storyPatternLinks xsi:type="mlstorypatterns:StoryPatternLink" uuid="_19WQwVKiEeyC7vd3a-HHMA" source="_AVE5lVKjEeyC7vd3a-HHMA" target="_wpZYYMjLEemCGpCyx_UZ0Q">
+      <feature xsi:type="ecore:EReference" href="de.mdelab.ldbc_snb#//City/isPartOf"/>
+    </storyPatternLinks>
+  </negativeApplicationConditions>
+  <negativeApplicationConditions uuid="_VSrU6FKjEeyC7vd3a-HHMA" name="nac2">
+    <storyPatternLinks xsi:type="mlstorypatterns:StoryPatternLink" uuid="_WOkVYVKjEeyC7vd3a-HHMA" source="_AVE5lVKjEeyC7vd3a-HHMA" target="_LVdLUMjMEemCGpCyx_UZ0Q">
+      <feature xsi:type="ecore:EReference" href="de.mdelab.ldbc_snb#//City/isPartOf"/>
+    </storyPatternLinks>
+  </negativeApplicationConditions>
+</mlstorypatterns:StoryPattern>

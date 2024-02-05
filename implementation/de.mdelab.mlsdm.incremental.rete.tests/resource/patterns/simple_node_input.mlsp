@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mlstorypatterns:StoryPattern xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:mlstorypatterns="http://www.mdelab.de/mlstorypatterns/1.0" uuid="_YxTdoESzEe2jr7ADrMgWUQ">
+  <storyPatternObjects xsi:type="mlstorypatterns:StoryPatternObject" uuid="_ZKkSMESzEe2jr7ADrMgWUQ" name="p" bindingType="CAN_BE_BOUND">
+    <type xsi:type="ecore:EClass" href="de.mdelab.ldbc_snb#//Person"/>
+  </storyPatternObjects>
+</mlstorypatterns:StoryPattern>

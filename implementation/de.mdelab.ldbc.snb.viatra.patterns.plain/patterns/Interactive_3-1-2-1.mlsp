@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="ASCII"?>
+<mlstorypatterns:StoryPattern xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:mlexpressions="http://www.mdelab.de/mlexpressions/1.0" xmlns:mlstorypatterns="http://www.mdelab.de/mlstorypatterns/1.0" uuid="_gz75Mw1MEeuVyo1XwFLgzA" name="Interactive_3.1.2.1">
+  <storyPatternObjects xsi:type="mlstorypatterns:StoryPatternObject" uuid="_gz75NA1MEeuVyo1XwFLgzA" name="node0" bindingType="CAN_BE_BOUND">
+    <type xsi:type="ecore:EClass" href="de.mdelab.ldbc_snb#//Post"/>
+  </storyPatternObjects>
+  <storyPatternObjects xsi:type="mlstorypatterns:StoryPatternObject" uuid="_gz75NQ1MEeuVyo1XwFLgzA" name="node1" bindingType="CAN_BE_BOUND">
+    <type xsi:type="ecore:EClass" href="de.mdelab.ldbc_snb#//Country"/>
+  </storyPatternObjects>
+  <storyPatternObjects xsi:type="mlstorypatterns:StoryPatternObject" uuid="_gz8gQQ1MEeuVyo1XwFLgzA" name="node2" bindingType="CAN_BE_BOUND">
+    <type xsi:type="ecore:EClass" href="de.mdelab.ldbc_snb#//Person"/>
+  </storyPatternObjects>
+  <constraints xsi:type="mlexpressions:MLStringExpression" uuid="_gz8gQA1MEeuVyo1XwFLgzA" expressionString="left CONTAINS (node0, node1)" expressionLanguageID="ICL"/>
+  <constraints xsi:type="mlexpressions:MLStringExpression" uuid="_gz8gQg1MEeuVyo1XwFLgzA" expressionString="right CONTAINS (node0, node2)" expressionLanguageID="ICL"/>
+</mlstorypatterns:StoryPattern>

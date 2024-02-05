@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Persistent
+Bundle-SymbolicName: de.mdelab.mlsdm.incremental.rete.localized
+Bundle-Version: 1.0.0.qualifier
+Bundle-RequiredExecutionEnvironment: JavaSE-17
+Automatic-Module-Name: de.mdelab.mlsdm.incremental.rete.persistent
+Require-Bundle: de.mdelab.mlsdm.incremental.rete;bundle-version="1.0.0",
+ de.mdelab.mlsdm.incremental;bundle-version="1.0.0",
+ org.eclipse.emf.ecore;bundle-version="2.26.0",
+ de.mdelab.mlsdm.mlindices,
+ de.mdelab.mlsdm.interpreter.searchModel;bundle-version="1.0.0",
+ de.mdelab.sdm.interpreter.core;bundle-version="1.0.0",
+ de.mdelab.mlstorypatterns;bundle-version="1.1.0",
+ de.mdelab.emf.util;bundle-version="1.0.0"
+Export-Package: de.mdelab.mlsdm.incremental.rete.persistent.marking,
+ de.mdelab.mlsdm.incremental.rete.persistent.marking.nodes

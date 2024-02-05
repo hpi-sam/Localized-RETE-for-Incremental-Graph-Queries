@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mlstorypatterns:StoryPattern xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:mlstorypatterns="http://www.mdelab.de/mlstorypatterns/1.0" uuid="_grI9IESyEe2jr7ADrMgWUQ">
+  <storyPatternLinks xsi:type="mlstorypatterns:StoryPatternLink" uuid="_oxHlwESyEe2jr7ADrMgWUQ" source="_ipjxoESyEe2jr7ADrMgWUQ" target="_maCZoESyEe2jr7ADrMgWUQ">
+    <feature xsi:type="ecore:EReference" href="de.mdelab.ldbc_snb#//Person/oppHasCreator"/>
+  </storyPatternLinks>
+  <storyPatternObjects xsi:type="mlstorypatterns:StoryPatternObject" uuid="_ipjxoESyEe2jr7ADrMgWUQ" name="p1" outgoingLinks="_oxHlwESyEe2jr7ADrMgWUQ" bindingType="CAN_BE_BOUND">
+    <type xsi:type="ecore:EClass" href="de.mdelab.ldbc_snb#//Person"/>
+  </storyPatternObjects>
+  <storyPatternObjects xsi:type="mlstorypatterns:StoryPatternObject" uuid="_maCZoESyEe2jr7ADrMgWUQ" name="m" incomingLinks="_oxHlwESyEe2jr7ADrMgWUQ _sSyVsESyEe2jr7ADrMgWUQ" bindingType="CAN_BE_BOUND">
+    <type xsi:type="ecore:EClass" href="de.mdelab.ldbc_snb#//Message"/>
+  </storyPatternObjects>
+  <negativeApplicationConditions uuid="_rAXrmESyEe2jr7ADrMgWUQ" name="NAC">
+    <storyPatternLinks xsi:type="mlstorypatterns:StoryPatternLink" uuid="_sSyVsESyEe2jr7ADrMgWUQ" source="_tDCG5USyEe2jr7ADrMgWUQ" target="_maCZoESyEe2jr7ADrMgWUQ">
+      <feature xsi:type="ecore:EReference" href="de.mdelab.ldbc_snb#//LikesLink/likes"/>
+    </storyPatternLinks>
+    <storyPatternObjects xsi:type="mlstorypatterns:StoryPatternObject" uuid="_tDCG5USyEe2jr7ADrMgWUQ" name="likes" outgoingLinks="_sSyVsESyEe2jr7ADrMgWUQ">
+      <type xsi:type="ecore:EClass" href="de.mdelab.ldbc_snb#//LikesLink"/>
+    </storyPatternObjects>
+  </negativeApplicationConditions>
+</mlstorypatterns:StoryPattern>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><plugin>
+  <extension id="de.mdelab.ldbc.snb.viatra.patterns.plain.InteractiveQueries" point="org.eclipse.viatra.query.runtime.queryspecification">
+    <group group="org.eclipse.viatra.query.runtime.extensibility.SingletonExtensionFactory:de.mdelab.ldbc.snb.viatra.patterns.plain.InteractiveQueries" id="de.mdelab.ldbc.snb.viatra.patterns.plain.InteractiveQueries">
+      <query-specification fqn="de.mdelab.ldbc.snb.viatra.patterns.plain.interactive1"/>
+      <query-specification fqn="de.mdelab.ldbc.snb.viatra.patterns.plain.interactive2"/>
+      <query-specification fqn="de.mdelab.ldbc.snb.viatra.patterns.plain.interactive3"/>
+      <query-specification fqn="de.mdelab.ldbc.snb.viatra.patterns.plain.interactive3nac"/>
+      <query-specification fqn="de.mdelab.ldbc.snb.viatra.patterns.plain.interactive3_1"/>
+      <query-specification fqn="de.mdelab.ldbc.snb.viatra.patterns.plain.interactive3_2"/>
+      <query-specification fqn="de.mdelab.ldbc.snb.viatra.patterns.plain.interactive4"/>
+      <query-specification fqn="de.mdelab.ldbc.snb.viatra.patterns.plain.interactive4nac"/>
+      <query-specification fqn="de.mdelab.ldbc.snb.viatra.patterns.plain.interactive4_1"/>
+      <query-specification fqn="de.mdelab.ldbc.snb.viatra.patterns.plain.interactive4ngc_nested"/>
+      <query-specification fqn="de.mdelab.ldbc.snb.viatra.patterns.plain.interactive4_1_nested"/>
+      <query-specification fqn="de.mdelab.ldbc.snb.viatra.patterns.plain.interactive4_2_nested"/>
+      <query-specification fqn="de.mdelab.ldbc.snb.viatra.patterns.plain.interactive4_1_1_nested"/>
+      <query-specification fqn="de.mdelab.ldbc.snb.viatra.patterns.plain.interactive5"/>
+      <query-specification fqn="de.mdelab.ldbc.snb.viatra.patterns.plain.interactive6"/>
+      <query-specification fqn="de.mdelab.ldbc.snb.viatra.patterns.plain.interactive7"/>
+      <query-specification fqn="de.mdelab.ldbc.snb.viatra.patterns.plain.interactive8"/>
+      <query-specification fqn="de.mdelab.ldbc.snb.viatra.patterns.plain.interactive9"/>
+      <query-specification fqn="de.mdelab.ldbc.snb.viatra.patterns.plain.interactive10"/>
+      <query-specification fqn="de.mdelab.ldbc.snb.viatra.patterns.plain.interactive11"/>
+      <query-specification fqn="de.mdelab.ldbc.snb.viatra.patterns.plain.interactive12"/>
+    </group>
+  </extension>
+</plugin>

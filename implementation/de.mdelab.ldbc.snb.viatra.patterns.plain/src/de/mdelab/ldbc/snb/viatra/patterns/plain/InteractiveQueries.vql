@@ -1,0 +1,186 @@
+package de.mdelab.ldbc.snb.viatra.patterns.plain
+
+import "de.mdelab.ldbc_snb"
+
+pattern interactive1(p1: Person, k1: KnowsLink, p2: Person, k2: KnowsLink, p3: Person, k3: KnowsLink, p4: Person, i1: City, w: WorkAtLink, c: Company, o: Country, s: StudyAtLink, u: University, i2: City) {
+	Person.knows(p1, k1);
+	KnowsLink.knows(k1, p2);
+	Person.knows(p2, k2);
+	KnowsLink.knows(k2, p3);
+	Person.knows(p3, k3);
+	KnowsLink.knows(k3, p4);
+
+	Person.isLocatedIn(p4, i1);
+	Person.workAt(p4, w);
+	WorkAtLink.workAt(w, c);
+	Company.isLocatedIn(c, o);
+	Person.studyAt(p4, s);
+	StudyAtLink.studyAt(s, u);
+	University.isLocatedIn(u, i2);
+}
+
+pattern interactive2(p1: Person, k1: KnowsLink, p2: Person, m: Message) {
+	Person.knows(p1, k1);
+	KnowsLink.knows(k1, p2);
+	Person.oppHasCreator(p2, m);
+}
+
+pattern interactive3(p1: Person, k1: KnowsLink, p2: Person, k2: KnowsLink, p3: Person, m1: Post, o1: Country, m2: Post, o2: Country) {
+	Person.knows(p1, k1);
+	KnowsLink.knows(k1, p2);
+	Person.knows(p2, k2);
+	KnowsLink.knows(k2, p3);
+	Person.oppHasCreator(p3, m1);
+	Post.isLocatedIn(m1, o1);
+	Person.oppHasCreator(p3, m2);
+	Post.isLocatedIn(m2, o2);
+}
+
+pattern interactive3nac(p1: Person, k1: KnowsLink, p2: Person, k2: KnowsLink, p3: Person, m1: Post, o1: Country, m2: Post, o2: Country) {
+	Person.knows(p1, k1);
+	KnowsLink.knows(k1, p2);
+	Person.knows(p2, k2);
+	KnowsLink.knows(k2, p3);
+	Person.oppHasCreator(p3, m1);
+	Post.isLocatedIn(m1, o1);
+	Person.oppHasCreator(p3, m2);
+	Post.isLocatedIn(m2, o2);
+	
+	neg find interactive3_1(p3, _, o1);
+	neg find interactive3_2(p3, _, o2);
+}
+
+pattern interactive3_1(p3: Person, i1: City, o1: Country) {
+	Person.isLocatedIn(p3, i1);
+	City.isPartOf(i1, o1);
+}
+
+pattern interactive3_2(p3: Person, i2: City, o2: Country) {
+	Person.isLocatedIn(p3, i2);
+	City.isPartOf(i2, o2);
+}
+
+pattern interactive4(p1: Person, k1: KnowsLink, p2: Person, m1: Post, t:Tag) {
+	Person.knows(p1, k1);
+	KnowsLink.knows(k1, p2);
+	Person.oppHasCreator(p2, m1);
+	Post.hasTag(m1, t);
+}
+
+pattern interactive4nac(p1: Person, k1: KnowsLink, p2: Person, m1: Post, t:Tag) {
+	Person.knows(p1, k1);
+	KnowsLink.knows(k1, p2);
+	Person.oppHasCreator(p2, m1);
+	Post.hasTag(m1, t);
+	
+	neg find interactive4_1(p1, m1, _, _, _, t);
+}
+
+pattern interactive4_1(p1: Person, m1:Post, k: KnowsLink, p2: Person, m: Post, t: Tag) {
+	Person.knows(p1, k);
+	KnowsLink.knows(k, p2);
+	Person.oppHasCreator(p2, m);
+	Post.hasTag(m, t);
+	Post.successor(m1, m);
+}
+
+pattern interactive4ngc_nested(p1: Person, k1: KnowsLink, p2: Person, m1: Post, t:Tag) {
+	Person.knows(p1, k1);
+	KnowsLink.knows(k1, p2);
+	Person.oppHasCreator(p2, m1);
+	Post.hasTag(m1, t);
+	
+	neg find interactive4_1_nested(p1, m1, _, _, _, t);
+	neg find interactive4_2_nested(m1, _);
+}
+
+pattern interactive4_1_nested(p1: Person, m1:Post, k: KnowsLink, p2: Person, m: Post, t: Tag) {
+	Person.knows(p1, k);
+	KnowsLink.knows(k, p2);
+	Person.oppHasCreator(p2, m);
+	Post.hasTag(m, t);
+	Post.successor(m1, m);
+	
+	neg find interactive4_1_1_nested(m, _);
+}
+
+pattern interactive4_2_nested(m: Post, c: Comment) {
+	Comment.replyOf(c, m);
+}
+
+pattern interactive4_1_1_nested(m: Post, c: Comment) {
+	Comment.replyOf(c, m);
+}
+
+pattern interactive5(p1: Person, k1: KnowsLink, p2: Person, k2: KnowsLink, p3: Person, h: HasMemberLink, f: Forum, m: Post) {
+	Person.knows(p1, k1);
+	KnowsLink.knows(k1, p2);
+	Person.knows(p2, k2);
+	KnowsLink.knows(k2, p3);
+	Person.oppHasCreator(p3, m);
+	Person.oppHasMember(p3, h);
+	HasMemberLink.oppHasMember(h, f);
+	Forum.oppContainer(f, m);
+}
+
+pattern interactive6(p1: Person, k1: KnowsLink, p2: Person, k2: KnowsLink, p3: Person, m: Post, t1: Tag, t2: Tag) {
+	Person.knows(p1, k1);
+	KnowsLink.knows(k1, p2);
+	Person.knows(p2, k2);
+	KnowsLink.knows(k2, p3);
+	Person.oppHasCreator(p3, m);
+	Post.hasTag(m, t1);
+	Post.hasTag(m, t2);
+}
+
+pattern interactive7(p1: Person, k: KnowsLink, p2: Person, m: Message, l: LikesLink) {
+	Person.oppHasCreator(p1, m);
+	Person.knows(p1, k);
+	KnowsLink.knows(k, p2);
+	Person.likes(p2, l);
+	LikesLink.likes(l, m);
+}
+
+pattern interactive8(p1: Person, p2: Person, c: Comment, m: Message) {
+	Person.oppHasCreator(p1, m);
+	Comment.replyOf(c, m);
+	Person.oppHasCreator(p2, c);
+}
+
+pattern interactive9(p1: Person, k1: KnowsLink, p2: Person, k2: KnowsLink, p3: Person, m: Message) {
+	Person.knows(p1, k1);
+	KnowsLink.knows(k1, p2);
+	Person.knows(p2, k2);
+	KnowsLink.knows(k2, p3);
+	Person.oppHasCreator(p3, m);
+}
+
+pattern interactive10(p1: Person, k1: KnowsLink, p2: Person, k2: KnowsLink, p3: Person, m: Post, t: Tag) {
+	Person.knows(p1, k1);
+	KnowsLink.knows(k1, p2);
+	Person.knows(p2, k2);
+	KnowsLink.knows(k2, p3);
+	Person.hasInterest(p1, t);
+	Post.hasTag(m, t);
+	Person.oppHasCreator(p3, m);
+}
+
+pattern interactive11(p1: Person, k1: KnowsLink, p2: Person, k2: KnowsLink, p3: Person, w: WorkAtLink, org: Company, o: Country) {
+	Person.knows(p1, k1);
+	KnowsLink.knows(k1, p2);
+	Person.knows(p2, k2);
+	KnowsLink.knows(k2, p3);
+	Person.workAt(p3, w);
+	WorkAtLink.workAt(w, org);
+	Company.isLocatedIn(org, o);
+}
+
+pattern interactive12(p1: Person, k1: KnowsLink, p2: Person, c: Comment, t:Tag, tc1: TagClass, tc2: TagClass) {
+	Person.knows(p1, k1);
+	KnowsLink.knows(k1, p2);
+	Person.oppHasCreator(p2, c);
+	Comment.replyOf(c, m);
+	Post.hasTag(m, t);
+	Tag.hasType(t, tc1);
+	TagClass.isSubclassOf(tc1, tc2);
+}

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="ASCII"?>
+<mlstorypatterns:StoryPattern xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:mlstorypatterns="http://www.mdelab.de/mlstorypatterns/1.0" uuid="_o23N0A1MEeuyHoI1WsAwyg" name="Interactive_8.1.2.2">
+  <storyPatternLinks xsi:type="mlstorypatterns:StoryPatternLink" uuid="_o23N0w1MEeuyHoI1WsAwyg" source="_o23N0Q1MEeuyHoI1WsAwyg" target="_o23N0g1MEeuyHoI1WsAwyg">
+    <feature xsi:type="ecore:EReference" href="de.mdelab.ldbc_snb#//Comment/replyOf"/>
+  </storyPatternLinks>
+  <storyPatternObjects xsi:type="mlstorypatterns:StoryPatternObject" uuid="_o23N0Q1MEeuyHoI1WsAwyg" name="source" outgoingLinks="_o23N0w1MEeuyHoI1WsAwyg" bindingType="CAN_BE_BOUND">
+    <type xsi:type="ecore:EClass" href="de.mdelab.ldbc_snb#//Comment"/>
+  </storyPatternObjects>
+  <storyPatternObjects xsi:type="mlstorypatterns:StoryPatternObject" uuid="_o23N0g1MEeuyHoI1WsAwyg" name="target" incomingLinks="_o23N0w1MEeuyHoI1WsAwyg" bindingType="CAN_BE_BOUND">
+    <type xsi:type="ecore:EClass" href="de.mdelab.ldbc_snb#//Message"/>
+  </storyPatternObjects>
+</mlstorypatterns:StoryPattern>

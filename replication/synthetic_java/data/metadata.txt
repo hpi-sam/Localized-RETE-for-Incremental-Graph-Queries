@@ -1,0 +1,8 @@
+CLASSIFIER:http://www.eclipse.org/MoDisco/Java/0.2.incubation/java;ClassDeclaration=100.0
+CLASSIFIER:http://www.eclipse.org/MoDisco/Java/0.2.incubation/java;TypeAccess=1000.0
+CLASSIFIER:http://www.eclipse.org/MoDisco/Java/0.2.incubation/java;Package=10.0
+CLASSIFIER:http://www.eclipse.org/MoDisco/Java/0.2.incubation/java;FieldDeclaration=1000.0
+FEATURE:http://www.eclipse.org/MoDisco/Java/0.2.incubation/java;ClassDeclaration->http://www.eclipse.org/MoDisco/Java/0.2.incubation/java;AbstractTypeDeclaration#bodyDeclarations->http://www.eclipse.org/MoDisco/Java/0.2.incubation/java;FieldDeclaration=1000.0
+FEATURE:http://www.eclipse.org/MoDisco/Java/0.2.incubation/java;Package->http://www.eclipse.org/MoDisco/Java/0.2.incubation/java;Package#ownedElements->http://www.eclipse.org/MoDisco/Java/0.2.incubation/java;ClassDeclaration=100.0
+FEATURE:http://www.eclipse.org/MoDisco/Java/0.2.incubation/java;TypeAccess->http://www.eclipse.org/MoDisco/Java/0.2.incubation/java;TypeAccess#type->http://www.eclipse.org/MoDisco/Java/0.2.incubation/java;ClassDeclaration=1000.0
+FEATURE:http://www.eclipse.org/MoDisco/Java/0.2.incubation/java;FieldDeclaration->http://www.eclipse.org/MoDisco/Java/0.2.incubation/java;AbstractVariablesContainer#type->http://www.eclipse.org/MoDisco/Java/0.2.incubation/java;TypeAccess=1000.0

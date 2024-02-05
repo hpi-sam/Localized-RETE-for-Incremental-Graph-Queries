@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mlstorypatterns:StoryPattern xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:mlstorypatterns="http://www.mdelab.de/mlstorypatterns/1.0" uuid="__ZirkMjOEemCGpCyx_UZ0Q" name="Interactive_5">
+  <storyPatternLinks xsi:type="mlstorypatterns:StoryPatternLink" uuid="_ZivMkMjQEemCGpCyx_UZ0Q" source="_J65VAMjQEemCGpCyx_UZ0Q" target="_MnihcMjQEemCGpCyx_UZ0Q">
+    <feature xsi:type="ecore:EReference" href="de.mdelab.ldbc_snb#//Person/knows"/>
+  </storyPatternLinks>
+  <storyPatternLinks xsi:type="mlstorypatterns:StoryPatternLink" uuid="_arEGkMjQEemCGpCyx_UZ0Q" source="_MnihcMjQEemCGpCyx_UZ0Q" target="_OubVcMjQEemCGpCyx_UZ0Q">
+    <feature xsi:type="ecore:EReference" href="de.mdelab.ldbc_snb#//KnowsLink/knows"/>
+  </storyPatternLinks>
+  <storyPatternLinks xsi:type="mlstorypatterns:StoryPatternLink" uuid="_bmChEMjQEemCGpCyx_UZ0Q" source="_OubVcMjQEemCGpCyx_UZ0Q" target="_PefgcMjQEemCGpCyx_UZ0Q">
+    <feature xsi:type="ecore:EReference" href="de.mdelab.ldbc_snb#//Person/knows"/>
+  </storyPatternLinks>
+  <storyPatternLinks xsi:type="mlstorypatterns:StoryPatternLink" uuid="_ccSMkMjQEemCGpCyx_UZ0Q" source="_PefgcMjQEemCGpCyx_UZ0Q" target="_QanKcMjQEemCGpCyx_UZ0Q">
+    <feature xsi:type="ecore:EReference" href="de.mdelab.ldbc_snb#//KnowsLink/knows"/>
+  </storyPatternLinks>
+  <storyPatternLinks xsi:type="mlstorypatterns:StoryPatternLink" uuid="_d88uEMjQEemCGpCyx_UZ0Q" source="_QanKcMjQEemCGpCyx_UZ0Q" target="_U6ZIcMjQEemCGpCyx_UZ0Q">
+    <feature xsi:type="ecore:EReference" href="de.mdelab.ldbc_snb#//Person/oppHasCreator"/>
+  </storyPatternLinks>
+  <storyPatternLinks xsi:type="mlstorypatterns:StoryPatternLink" uuid="_f0RcEMjQEemCGpCyx_UZ0Q" source="_QanKcMjQEemCGpCyx_UZ0Q" target="_SlxacMjQEemCGpCyx_UZ0Q">
+    <feature xsi:type="ecore:EReference" href="de.mdelab.ldbc_snb#//Person/oppHasMember"/>
+  </storyPatternLinks>
+  <storyPatternLinks xsi:type="mlstorypatterns:StoryPatternLink" uuid="_iv44oMjQEemCGpCyx_UZ0Q" source="_SlxacMjQEemCGpCyx_UZ0Q" target="_Tr4t8MjQEemCGpCyx_UZ0Q">
+    <feature xsi:type="ecore:EReference" href="de.mdelab.ldbc_snb#//HasMemberLink/oppHasMember"/>
+  </storyPatternLinks>
+  <storyPatternLinks xsi:type="mlstorypatterns:StoryPatternLink" uuid="_jcNzIMjQEemCGpCyx_UZ0Q" source="_Tr4t8MjQEemCGpCyx_UZ0Q" target="_U6ZIcMjQEemCGpCyx_UZ0Q">
+    <feature xsi:type="ecore:EReference" href="de.mdelab.ldbc_snb#//Forum/oppContainer"/>
+  </storyPatternLinks>
+  <storyPatternObjects xsi:type="mlstorypatterns:StoryPatternObject" uuid="_J65VAMjQEemCGpCyx_UZ0Q" name="p1" outgoingLinks="_ZivMkMjQEemCGpCyx_UZ0Q" bindingType="CAN_BE_BOUND">
+    <type xsi:type="ecore:EClass" href="de.mdelab.ldbc_snb#//Person"/>
+  </storyPatternObjects>
+  <storyPatternObjects xsi:type="mlstorypatterns:StoryPatternObject" uuid="_MnihcMjQEemCGpCyx_UZ0Q" name="k1" outgoingLinks="_arEGkMjQEemCGpCyx_UZ0Q" incomingLinks="_ZivMkMjQEemCGpCyx_UZ0Q" bindingType="CAN_BE_BOUND">
+    <type xsi:type="ecore:EClass" href="de.mdelab.ldbc_snb#//KnowsLink"/>
+  </storyPatternObjects>
+  <storyPatternObjects xsi:type="mlstorypatterns:StoryPatternObject" uuid="_OubVcMjQEemCGpCyx_UZ0Q" name="p2" outgoingLinks="_bmChEMjQEemCGpCyx_UZ0Q" incomingLinks="_arEGkMjQEemCGpCyx_UZ0Q" bindingType="CAN_BE_BOUND">
+    <type xsi:type="ecore:EClass" href="de.mdelab.ldbc_snb#//Person"/>
+  </storyPatternObjects>
+  <storyPatternObjects xsi:type="mlstorypatterns:StoryPatternObject" uuid="_PefgcMjQEemCGpCyx_UZ0Q" name="k2" outgoingLinks="_ccSMkMjQEemCGpCyx_UZ0Q" incomingLinks="_bmChEMjQEemCGpCyx_UZ0Q" bindingType="CAN_BE_BOUND">
+    <type xsi:type="ecore:EClass" href="de.mdelab.ldbc_snb#//KnowsLink"/>
+  </storyPatternObjects>
+  <storyPatternObjects xsi:type="mlstorypatterns:StoryPatternObject" uuid="_QanKcMjQEemCGpCyx_UZ0Q" name="p3" outgoingLinks="_d88uEMjQEemCGpCyx_UZ0Q _f0RcEMjQEemCGpCyx_UZ0Q" incomingLinks="_ccSMkMjQEemCGpCyx_UZ0Q" bindingType="CAN_BE_BOUND">
+    <type xsi:type="ecore:EClass" href="de.mdelab.ldbc_snb#//Person"/>
+  </storyPatternObjects>
+  <storyPatternObjects xsi:type="mlstorypatterns:StoryPatternObject" uuid="_SlxacMjQEemCGpCyx_UZ0Q" name="h" outgoingLinks="_iv44oMjQEemCGpCyx_UZ0Q" incomingLinks="_f0RcEMjQEemCGpCyx_UZ0Q" bindingType="CAN_BE_BOUND">
+    <type xsi:type="ecore:EClass" href="de.mdelab.ldbc_snb#//HasMemberLink"/>
+  </storyPatternObjects>
+  <storyPatternObjects xsi:type="mlstorypatterns:StoryPatternObject" uuid="_Tr4t8MjQEemCGpCyx_UZ0Q" name="f" outgoingLinks="_jcNzIMjQEemCGpCyx_UZ0Q" incomingLinks="_iv44oMjQEemCGpCyx_UZ0Q" bindingType="CAN_BE_BOUND">
+    <type xsi:type="ecore:EClass" href="de.mdelab.ldbc_snb#//Forum"/>
+  </storyPatternObjects>
+  <storyPatternObjects xsi:type="mlstorypatterns:StoryPatternObject" uuid="_U6ZIcMjQEemCGpCyx_UZ0Q" name="m" incomingLinks="_d88uEMjQEemCGpCyx_UZ0Q _jcNzIMjQEemCGpCyx_UZ0Q" bindingType="CAN_BE_BOUND">
+    <type xsi:type="ecore:EClass" href="de.mdelab.ldbc_snb#//Post"/>
+  </storyPatternObjects>
+</mlstorypatterns:StoryPattern>

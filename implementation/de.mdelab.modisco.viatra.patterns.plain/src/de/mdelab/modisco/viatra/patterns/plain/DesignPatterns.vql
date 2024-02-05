@@ -1,0 +1,128 @@
+package de.mdelab.modisco.viatra.patterns.plain
+
+import "http://www.eclipse.org/MoDisco/Java/0.2.incubation/java"
+
+pattern Composite(field: FieldDeclaration, component: ClassDeclaration, abstractMethod: MethodDeclaration, t1: TypeAccess,
+	t: TypeAccess, p: ParameterizedType, t2: TypeAccess, composite: ClassDeclaration, concreteMethod: MethodDeclaration
+) {
+	FieldDeclaration.type(field, t1);
+	TypeAccess.type(t1, p);
+	ParameterizedType.typeArguments(p, t2);
+	TypeAccess.type(t2, composite);
+	ClassDeclaration.superClass(composite, t);
+	TypeAccess.type(t, component);
+	ClassDeclaration.bodyDeclarations(component, field);
+	
+	ClassDeclaration.bodyDeclarations(composite, concreteMethod);
+	MethodDeclaration.redefinedMethodDeclaration(concreteMethod, abstractMethod);
+	ClassDeclaration.bodyDeclarations(component, abstractMethod);
+}
+
+pattern Observer(um: MethodDeclaration, uInvocation: MethodInvocation, expStatement: ExpressionStatement, lb: Block,
+	loop: ForStatement, mb: Block, m: MethodDeclaration, s: ClassDeclaration, c: FieldDeclaration, tl: TypeAccess,
+	l: ParameterizedType, to: TypeAccess, o: ClassDeclaration, t1: TypeAccess, t2: TypeAccess, o1: ClassDeclaration,
+	o2: ClassDeclaration
+) {
+	ClassDeclaration.superClass(o1, t1);
+	TypeAccess.type(t1, o);
+	
+	ClassDeclaration.superClass(o2, t2);
+	TypeAccess.type(t2, o);
+	
+	ClassDeclaration.bodyDeclarations(o, um);
+	MethodInvocation.method(uInvocation, um);
+	ExpressionStatement.expression(expStatement, uInvocation);
+	Block.statements(lb, expStatement);
+	ForStatement.body(loop, lb);
+	Block.statements(mb, loop);
+	MethodDeclaration.body(m, mb);
+	ClassDeclaration.bodyDeclarations(s, m);
+	ClassDeclaration.bodyDeclarations(s, c);
+	FieldDeclaration.type(c, tl);
+	TypeAccess.type(tl, l);
+	ParameterizedType.typeArguments(l, to);
+	TypeAccess.type(to, o);
+}
+
+pattern Singleton (c: ClassDeclaration, constructor: ConstructorDeclaration, m2: Modifier, f: FieldDeclaration,
+	t: TypeAccess, m1: Modifier
+) {
+	FieldDeclaration.modifier(f, m1);
+	FieldDeclaration.type(f, t);
+	TypeAccess.type(t, c);
+	ClassDeclaration.bodyDeclarations(c, f);
+	ClassDeclaration.bodyDeclarations(c, constructor);
+	ConstructorDeclaration.modifier(constructor, m2);
+}
+
+pattern Strategy (context: ClassDeclaration, field: FieldDeclaration, t: TypeAccess, strategy: ClassDeclaration, method: MethodDeclaration,
+	m1: MethodDeclaration, s1: ClassDeclaration, t1: TypeAccess, m2: MethodDeclaration, s2: ClassDeclaration, t2: TypeAccess
+) {
+	ClassDeclaration.bodyDeclarations(context, field);
+	FieldDeclaration.type(field, t);
+	TypeAccess.type(t, strategy);
+	ClassDeclaration.bodyDeclarations(strategy, method);
+	
+	ClassDeclaration.bodyDeclarations(s1, m1);
+	MethodDeclaration.redefinedMethodDeclaration(m1, method);
+	ClassDeclaration.superClass(s1, t1);
+	TypeAccess.type(t1, strategy);
+	
+	ClassDeclaration.bodyDeclarations(s2, m2);
+	MethodDeclaration.redefinedMethodDeclaration(m2, method);
+	ClassDeclaration.superClass(s2, t2);
+	TypeAccess.type(t2, strategy);
+}
+
+pattern Path1 (pkg: Package, c1: ClassDeclaration, f1: FieldDeclaration, ta1: TypeAccess, c2: ClassDeclaration) {
+	Package.ownedElements(pkg, c1);
+	ClassDeclaration.bodyDeclarations(c1, f1);
+	FieldDeclaration.type(f1, ta1);
+	TypeAccess.type(ta1, c2);
+}
+
+pattern Path2 (pkg: Package, c1: ClassDeclaration, f1: FieldDeclaration, ta1: TypeAccess, c2: ClassDeclaration,
+	f2: FieldDeclaration, ta2: TypeAccess, c3: ClassDeclaration
+) {
+	Package.ownedElements(pkg, c1);
+	ClassDeclaration.bodyDeclarations(c1, f1);
+	FieldDeclaration.type(f1, ta1);
+	TypeAccess.type(ta1, c2);
+	ClassDeclaration.bodyDeclarations(c2, f2);
+	FieldDeclaration.type(f2, ta2);
+	TypeAccess.type(ta2, c3);
+}
+
+pattern Path3 (pkg: Package, c1: ClassDeclaration, f1: FieldDeclaration, ta1: TypeAccess, c2: ClassDeclaration,
+	f2: FieldDeclaration, ta2: TypeAccess, c3: ClassDeclaration, f3: FieldDeclaration, ta3: TypeAccess, c4: ClassDeclaration
+) {
+	Package.ownedElements(pkg, c1);
+	ClassDeclaration.bodyDeclarations(c1, f1);
+	FieldDeclaration.type(f1, ta1);
+	TypeAccess.type(ta1, c2);
+	ClassDeclaration.bodyDeclarations(c2, f2);
+	FieldDeclaration.type(f2, ta2);
+	TypeAccess.type(ta2, c3);
+	ClassDeclaration.bodyDeclarations(c3, f3);
+	FieldDeclaration.type(f3, ta3);
+	TypeAccess.type(ta3, c4);
+}
+
+pattern Path4 (pkg: Package, c1: ClassDeclaration, f1: FieldDeclaration, ta1: TypeAccess, c2: ClassDeclaration,
+	f2: FieldDeclaration, ta2: TypeAccess, c3: ClassDeclaration, f3: FieldDeclaration, ta3: TypeAccess, c4: ClassDeclaration,
+	f4: FieldDeclaration, ta4: TypeAccess, c5: ClassDeclaration
+) {
+	Package.ownedElements(pkg, c1);
+	ClassDeclaration.bodyDeclarations(c1, f1);
+	FieldDeclaration.type(f1, ta1);
+	TypeAccess.type(ta1, c2);
+	ClassDeclaration.bodyDeclarations(c2, f2);
+	FieldDeclaration.type(f2, ta2);
+	TypeAccess.type(ta2, c3);
+	ClassDeclaration.bodyDeclarations(c3, f3);
+	FieldDeclaration.type(f3, ta3);
+	TypeAccess.type(ta3, c4);
+	ClassDeclaration.bodyDeclarations(c4, f4);
+	FieldDeclaration.type(f4, ta4);
+	TypeAccess.type(ta4, c5);
+}

@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="ASCII"?>
+<gdn:GDN xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:gdn="http://www.mdelab.de/mlsdm/gdn/1.0" xmlns:mlexpressions="http://www.mdelab.de/mlexpressions/1.0" xmlns:mlstorypatterns="http://www.mdelab.de/mlstorypatterns/1.0" root="//@ownedNodes.17">
+  <ownedNodes>
+    <pattern uuid="_xcFiAFuAEe2PMdaNmIFi_Q" name="Interactive_4_NGC_NESTED.1.1.1.1">
+      <storyPatternLinks xsi:type="mlstorypatterns:StoryPatternLink" uuid="_xuJiYFuAEe2PMdaNmIFi_Q" source="_xpcBgFuAEe2PMdaNmIFi_Q" target="_xuFQ8FuAEe2PMdaNmIFi_Q">
+        <feature xsi:type="ecore:EReference" href="de.mdelab.ldbc_snb#//KnowsLink/knows"/>
+      </storyPatternLinks>
+      <storyPatternObjects xsi:type="mlstorypatterns:StoryPatternObject" uuid="_xpcBgFuAEe2PMdaNmIFi_Q" name="source" outgoingLinks="_xuJiYFuAEe2PMdaNmIFi_Q" bindingType="CAN_BE_BOUND">
+        <type xsi:type="ecore:EClass" href="de.mdelab.ldbc_snb#//KnowsLink"/>
+      </storyPatternObjects>
+      <storyPatternObjects xsi:type="mlstorypatterns:StoryPatternObject" uuid="_xuFQ8FuAEe2PMdaNmIFi_Q" name="target" incomingLinks="_xuJiYFuAEe2PMdaNmIFi_Q" bindingType="CAN_BE_BOUND">
+        <type xsi:type="ecore:EClass" href="de.mdelab.ldbc_snb#//Person"/>
+      </storyPatternObjects>
+    </pattern>
+  </ownedNodes>
+  <ownedNodes>
+    <pattern uuid="_xuNMwFuAEe2PMdaNmIFi_Q" name="Interactive_4_NGC_NESTED.1.1.1.2">
+      <storyPatternLinks xsi:type="mlstorypatterns:StoryPatternLink" uuid="_yB16cVuAEe2PMdaNmIFi_Q" source="_x2BE8FuAEe2PMdaNmIFi_Q" target="_yB16cFuAEe2PMdaNmIFi_Q">
+        <feature xsi:type="ecore:EReference" href="de.mdelab.ldbc_snb#//Person/knows"/>
+      </storyPatternLinks>
+      <storyPatternObjects xsi:type="mlstorypatterns:StoryPatternObject" uuid="_x2BE8FuAEe2PMdaNmIFi_Q" name="source" outgoingLinks="_yB16cVuAEe2PMdaNmIFi_Q" bindingType="CAN_BE_BOUND">
+        <type xsi:type="ecore:EClass" href="de.mdelab.ldbc_snb#//Person"/>
+      </storyPatternObjects>
+      <storyPatternObjects xsi:type="mlstorypatterns:StoryPatternObject" uuid="_yB16cFuAEe2PMdaNmIFi_Q" name="target" incomingLinks="_yB16cVuAEe2PMdaNmIFi_Q" bindingType="CAN_BE_BOUND">
+        <type xsi:type="ecore:EClass" href="de.mdelab.ldbc_snb#//KnowsLink"/>
+      </storyPatternObjects>
+    </pattern>
+  </ownedNodes>
+  <ownedNodes>
+    <dependencies node="//@ownedNodes.0" indexConstraint="_yB_rcFuAEe2PMdaNmIFi_Q">
+      <mappings parentVertex="_xpcBgFuAEe2PMdaNmIFi_Q" childVertex="_yB49wFuAEe2PMdaNmIFi_Q"/>
+      <mappings parentVertex="_xuFQ8FuAEe2PMdaNmIFi_Q" childVertex="_yB9PMFuAEe2PMdaNmIFi_Q" indexPosition="1"/>
+    </dependencies>
+    <dependencies node="//@ownedNodes.1" indexConstraint="_yB_rcluAEe2PMdaNmIFi_Q">
+      <mappings parentVertex="_x2BE8FuAEe2PMdaNmIFi_Q" childVertex="_yB_rcVuAEe2PMdaNmIFi_Q" indexPosition="1"/>
+      <mappings parentVertex="_yB16cFuAEe2PMdaNmIFi_Q" childVertex="_yB49wFuAEe2PMdaNmIFi_Q"/>
+    </dependencies>
+    <pattern uuid="_yB16cluAEe2PMdaNmIFi_Q" name="Interactive_4_NGC_NESTED.1.1.1">
+      <storyPatternObjects xsi:type="mlstorypatterns:StoryPatternObject" uuid="_yB49wFuAEe2PMdaNmIFi_Q" name="node0" bindingType="CAN_BE_BOUND">
+        <type xsi:type="ecore:EClass" href="de.mdelab.ldbc_snb#//KnowsLink"/>
+      </storyPatternObjects>
+      <storyPatternObjects xsi:type="mlstorypatterns:StoryPatternObject" uuid="_yB9PMFuAEe2PMdaNmIFi_Q" name="node1" bindingType="CAN_BE_BOUND">
+        <type xsi:type="ecore:EClass" href="de.mdelab.ldbc_snb#//Person"/>
+      </storyPatternObjects>
+      <storyPatternObjects xsi:type="mlstorypatterns:StoryPatternObject" uuid="_yB_rcVuAEe2PMdaNmIFi_Q" name="node2" bindingType="CAN_BE_BOUND">
+        <type xsi:type="ecore:EClass" href="de.mdelab.ldbc_snb#//Person"/>
+      </storyPatternObjects>
+      <constraints xsi:type="mlexpressions:MLStringExpression" uuid="_yB_rcFuAEe2PMdaNmIFi_Q" expressionString="left CONTAINS (node0, node1)" expressionLanguageID="ICL"/>
+      <constraints xsi:type="mlexpressions:MLStringExpression" uuid="_yB_rcluAEe2PMdaNmIFi_Q" expressionString="right CONTAINS (node0, node2)" expressionLanguageID="ICL"/>
+    </pattern>
+  </ownedNodes>
+  <ownedNodes>
+    <pattern uuid="_yB_rc1uAEe2PMdaNmIFi_Q" name="Interactive_4_NGC_NESTED.1.1.2.1.1">
+      <storyPatternLinks xsi:type="mlstorypatterns:StoryPatternLink" uuid="_-roFcVuAEe2PMdaNmIFi_Q" source="_8kTMkFuAEe2PMdaNmIFi_Q" target="_-roFcFuAEe2PMdaNmIFi_Q">
+        <feature xsi:type="ecore:EReference" href="de.mdelab.ldbc_snb#//Person/hasCreated"/>
+      </storyPatternLinks>
+      <storyPatternObjects xsi:type="mlstorypatterns:StoryPatternObject" uuid="_8kTMkFuAEe2PMdaNmIFi_Q" name="source" outgoingLinks="_-roFcVuAEe2PMdaNmIFi_Q" bindingType="CAN_BE_BOUND">
+        <type xsi:type="ecore:EClass" href="de.mdelab.ldbc_snb#//Person"/>
+      </storyPatternObjects>
+      <storyPatternObjects xsi:type="mlstorypatterns:StoryPatternObject" uuid="_-roFcFuAEe2PMdaNmIFi_Q" name="target" incomingLinks="_-roFcVuAEe2PMdaNmIFi_Q" bindingType="CAN_BE_BOUND">
+        <type xsi:type="ecore:EClass" href="de.mdelab.ldbc_snb#//Post"/>
+      </storyPatternObjects>
+    </pattern>
+  </ownedNodes>
+  <ownedNodes>
+    <pattern uuid="_-roFcluAEe2PMdaNmIFi_Q" name="Interactive_4_NGC_NESTED.1.1.2.1.2.1">
+      <storyPatternLinks xsi:type="mlstorypatterns:StoryPatternLink" uuid="__ClM4luAEe2PMdaNmIFi_Q" source="__ClM4FuAEe2PMdaNmIFi_Q" target="__ClM4VuAEe2PMdaNmIFi_Q">
+        <feature xsi:type="ecore:EReference" href="de.mdelab.ldbc_snb#//Comment/replyOf"/>
+      </storyPatternLinks>
+      <storyPatternObjects xsi:type="mlstorypatterns:StoryPatternObject" uuid="__ClM4FuAEe2PMdaNmIFi_Q" name="source" outgoingLinks="__ClM4luAEe2PMdaNmIFi_Q" bindingType="CAN_BE_BOUND">
+        <type xsi:type="ecore:EClass" href="de.mdelab.ldbc_snb#//Comment"/>
+      </storyPatternObjects>
+      <storyPatternObjects xsi:type="mlstorypatterns:StoryPatternObject" uuid="__ClM4VuAEe2PMdaNmIFi_Q" name="target" incomingLinks="__ClM4luAEe2PMdaNmIFi_Q" bindingType="CAN_BE_BOUND">
+        <type xsi:type="ecore:EClass" href="de.mdelab.ldbc_snb#//Post"/>
+      </storyPatternObjects>
+    </pattern>
+  </ownedNodes>
+  <ownedNodes>
+    <dependencies node="//@ownedNodes.3" indexConstraint="__Clz81uAEe2PMdaNmIFi_Q">
+      <mappings parentVertex="_8kTMkFuAEe2PMdaNmIFi_Q" childVertex="__Clz8VuAEe2PMdaNmIFi_Q" indexPosition="1"/>
+      <mappings parentVertex="_-roFcFuAEe2PMdaNmIFi_Q" childVertex="__Clz8luAEe2PMdaNmIFi_Q"/>
+    </dependencies>
+    <dependencies node="//@ownedNodes.4" indexConstraint="__Clz9FuAEe2PMdaNmIFi_Q" negative="true">
+      <mappings parentVertex="__ClM4FuAEe2PMdaNmIFi_Q"/>
+      <mappings parentVertex="__ClM4VuAEe2PMdaNmIFi_Q" childVertex="__Clz8luAEe2PMdaNmIFi_Q"/>
+    </dependencies>
+    <pattern uuid="__Clz8FuAEe2PMdaNmIFi_Q" name="Interactive_4_NGC_NESTED.1.1.2.1">
+      <storyPatternObjects xsi:type="mlstorypatterns:StoryPatternObject" uuid="__Clz8VuAEe2PMdaNmIFi_Q" name="node0" bindingType="CAN_BE_BOUND">
+        <type xsi:type="ecore:EClass" href="de.mdelab.ldbc_snb#//Person"/>
+      </storyPatternObjects>
+      <storyPatternObjects xsi:type="mlstorypatterns:StoryPatternObject" uuid="__Clz8luAEe2PMdaNmIFi_Q" name="node1" bindingType="CAN_BE_BOUND">
+        <type xsi:type="ecore:EClass" href="de.mdelab.ldbc_snb#//Post"/>
+      </storyPatternObjects>
+      <constraints xsi:type="mlexpressions:MLStringExpression" uuid="__Clz81uAEe2PMdaNmIFi_Q" expressionString="left CONTAINS (node1, node0)" expressionLanguageID="ICL"/>
+      <constraints xsi:type="mlexpressions:MLStringExpression" uuid="__Clz9FuAEe2PMdaNmIFi_Q" expressionString="right EXCLUDES (node1)" expressionLanguageID="ICL"/>
+    </pattern>
+  </ownedNodes>
+  <ownedNodes>
+    <pattern uuid="__Clz9VuAEe2PMdaNmIFi_Q" name="Interactive_4_NGC_NESTED.1.1.2.2.1">
+      <storyPatternLinks xsi:type="mlstorypatterns:StoryPatternLink" uuid="__Xfs8luAEe2PMdaNmIFi_Q" source="__Xfs8FuAEe2PMdaNmIFi_Q" target="__Xfs8VuAEe2PMdaNmIFi_Q">
+        <feature xsi:type="ecore:EReference" href="de.mdelab.ldbc_snb#//Message/hasTag"/>
+      </storyPatternLinks>
+      <storyPatternObjects xsi:type="mlstorypatterns:StoryPatternObject" uuid="__Xfs8FuAEe2PMdaNmIFi_Q" name="source" outgoingLinks="__Xfs8luAEe2PMdaNmIFi_Q" bindingType="CAN_BE_BOUND">
+        <type xsi:type="ecore:EClass" href="de.mdelab.ldbc_snb#//Post"/>
+      </storyPatternObjects>
+      <storyPatternObjects xsi:type="mlstorypatterns:StoryPatternObject" uuid="__Xfs8VuAEe2PMdaNmIFi_Q" name="target" incomingLinks="__Xfs8luAEe2PMdaNmIFi_Q" bindingType="CAN_BE_BOUND">
+        <type xsi:type="ecore:EClass" href="de.mdelab.ldbc_snb#//Tag"/>
+      </storyPatternObjects>
+    </pattern>
+  </ownedNodes>
+  <ownedNodes>
+    <dependencies node="//@ownedNodes.6" indexConstraint="__Xfs9luAEe2PMdaNmIFi_Q">
+      <mappings parentVertex="__Xfs8FuAEe2PMdaNmIFi_Q" childVertex="__Xfs9FuAEe2PMdaNmIFi_Q"/>
+      <mappings parentVertex="__Xfs8VuAEe2PMdaNmIFi_Q" childVertex="__Xfs9VuAEe2PMdaNmIFi_Q" indexPosition="1"/>
+    </dependencies>
+    <dependencies node="//@ownedNodes.4" indexConstraint="__Xfs91uAEe2PMdaNmIFi_Q" negative="true">
+      <mappings parentVertex="__ClM4FuAEe2PMdaNmIFi_Q"/>
+      <mappings parentVertex="__ClM4VuAEe2PMdaNmIFi_Q" childVertex="__Xfs9FuAEe2PMdaNmIFi_Q"/>
+    </dependencies>
+    <pattern uuid="__Xfs81uAEe2PMdaNmIFi_Q" name="Interactive_4_NGC_NESTED.1.1.2.2">
+      <storyPatternObjects xsi:type="mlstorypatterns:StoryPatternObject" uuid="__Xfs9FuAEe2PMdaNmIFi_Q" name="node0" bindingType="CAN_BE_BOUND">
+        <type xsi:type="ecore:EClass" href="de.mdelab.ldbc_snb#//Post"/>
+      </storyPatternObjects>
+      <storyPatternObjects xsi:type="mlstorypatterns:StoryPatternObject" uuid="__Xfs9VuAEe2PMdaNmIFi_Q" name="node1" bindingType="CAN_BE_BOUND">
+        <type xsi:type="ecore:EClass" href="de.mdelab.ldbc_snb#//Tag"/>
+      </storyPatternObjects>
+      <constraints xsi:type="mlexpressions:MLStringExpression" uuid="__Xfs9luAEe2PMdaNmIFi_Q" expressionString="left CONTAINS (node0, node1)" expressionLanguageID="ICL"/>
+      <constraints xsi:type="mlexpressions:MLStringExpression" uuid="__Xfs91uAEe2PMdaNmIFi_Q" expressionString="right EXCLUDES (node0)" expressionLanguageID="ICL"/>
+    </pattern>
+  </ownedNodes>
+  <ownedNodes>
+    <dependencies node="//@ownedNodes.5" indexConstraint="__Xfs-1uAEe2PMdaNmIFi_Q">
+      <mappings parentVertex="__Clz8VuAEe2PMdaNmIFi_Q" childVertex="__Xfs-VuAEe2PMdaNmIFi_Q" indexPosition="1"/>
+      <mappings parentVertex="__Clz8luAEe2PMdaNmIFi_Q" childVertex="__Xfs-luAEe2PMdaNmIFi_Q"/>
+    </dependencies>
+    <dependencies node="//@ownedNodes.7" indexConstraint="__XiJMFuAEe2PMdaNmIFi_Q">
+      <mappings parentVertex="__Xfs9FuAEe2PMdaNmIFi_Q" childVertex="__Xfs-luAEe2PMdaNmIFi_Q"/>
+      <mappings parentVertex="__Xfs9VuAEe2PMdaNmIFi_Q" childVertex="__XgUAFuAEe2PMdaNmIFi_Q" indexPosition="1"/>
+    </dependencies>
+    <pattern uuid="__Xfs-FuAEe2PMdaNmIFi_Q" name="Interactive_4_NGC_NESTED.1.1.2">
+      <storyPatternObjects xsi:type="mlstorypatterns:StoryPatternObject" uuid="__Xfs-VuAEe2PMdaNmIFi_Q" name="node0" bindingType="CAN_BE_BOUND">
+        <type xsi:type="ecore:EClass" href="de.mdelab.ldbc_snb#//Person"/>
+      </storyPatternObjects>
+      <storyPatternObjects xsi:type="mlstorypatterns:StoryPatternObject" uuid="__Xfs-luAEe2PMdaNmIFi_Q" name="node1" bindingType="CAN_BE_BOUND">
+        <type xsi:type="ecore:EClass" href="de.mdelab.ldbc_snb#//Post"/>
+      </storyPatternObjects>
+      <storyPatternObjects xsi:type="mlstorypatterns:StoryPatternObject" uuid="__XgUAFuAEe2PMdaNmIFi_Q" name="node2" bindingType="CAN_BE_BOUND">
+        <type xsi:type="ecore:EClass" href="de.mdelab.ldbc_snb#//Tag"/>
+      </storyPatternObjects>
+      <constraints xsi:type="mlexpressions:MLStringExpression" uuid="__Xfs-1uAEe2PMdaNmIFi_Q" expressionString="left CONTAINS (node1, node0)" expressionLanguageID="ICL"/>
+      <constraints xsi:type="mlexpressions:MLStringExpression" uuid="__XiJMFuAEe2PMdaNmIFi_Q" expressionString="right CONTAINS (node1, node2)" expressionLanguageID="ICL"/>
+    </pattern>
+  </ownedNodes>
+  <ownedNodes>
+    <dependencies node="//@ownedNodes.2" indexConstraint="__XiJNVuAEe2PMdaNmIFi_Q">
+      <mappings parentVertex="_yB49wFuAEe2PMdaNmIFi_Q" childVertex="__XiJMluAEe2PMdaNmIFi_Q" indexPosition="1"/>
+      <mappings parentVertex="_yB9PMFuAEe2PMdaNmIFi_Q" childVertex="__XiJM1uAEe2PMdaNmIFi_Q"/>
+      <mappings parentVertex="_yB_rcVuAEe2PMdaNmIFi_Q" childVertex="__XiJNFuAEe2PMdaNmIFi_Q" indexPosition="2"/>
+    </dependencies>
+    <dependencies node="//@ownedNodes.8" indexConstraint="__XiwQluAEe2PMdaNmIFi_Q">
+      <mappings parentVertex="__Xfs-VuAEe2PMdaNmIFi_Q" childVertex="__XiJM1uAEe2PMdaNmIFi_Q"/>
+      <mappings parentVertex="__Xfs-luAEe2PMdaNmIFi_Q" childVertex="__XiwQFuAEe2PMdaNmIFi_Q" indexPosition="1"/>
+      <mappings parentVertex="__XgUAFuAEe2PMdaNmIFi_Q" childVertex="__XiwQVuAEe2PMdaNmIFi_Q" indexPosition="2"/>
+    </dependencies>
+    <pattern uuid="__XiJMVuAEe2PMdaNmIFi_Q" name="Interactive_4_NGC_NESTED.1.1">
+      <storyPatternObjects xsi:type="mlstorypatterns:StoryPatternObject" uuid="__XiJMluAEe2PMdaNmIFi_Q" name="node0" bindingType="CAN_BE_BOUND">
+        <type xsi:type="ecore:EClass" href="de.mdelab.ldbc_snb#//KnowsLink"/>
+      </storyPatternObjects>
+      <storyPatternObjects xsi:type="mlstorypatterns:StoryPatternObject" uuid="__XiJM1uAEe2PMdaNmIFi_Q" name="node1" bindingType="CAN_BE_BOUND">
+        <type xsi:type="ecore:EClass" href="de.mdelab.ldbc_snb#//Person"/>
+      </storyPatternObjects>
+      <storyPatternObjects xsi:type="mlstorypatterns:StoryPatternObject" uuid="__XiJNFuAEe2PMdaNmIFi_Q" name="node2" bindingType="CAN_BE_BOUND">
+        <type xsi:type="ecore:EClass" href="de.mdelab.ldbc_snb#//Person"/>
+      </storyPatternObjects>
+      <storyPatternObjects xsi:type="mlstorypatterns:StoryPatternObject" uuid="__XiwQFuAEe2PMdaNmIFi_Q" name="node3" bindingType="CAN_BE_BOUND">
+        <type xsi:type="ecore:EClass" href="de.mdelab.ldbc_snb#//Post"/>
+      </storyPatternObjects>
+      <storyPatternObjects xsi:type="mlstorypatterns:StoryPatternObject" uuid="__XiwQVuAEe2PMdaNmIFi_Q" name="node4" bindingType="CAN_BE_BOUND">
+        <type xsi:type="ecore:EClass" href="de.mdelab.ldbc_snb#//Tag"/>
+      </storyPatternObjects>
+      <constraints xsi:type="mlexpressions:MLStringExpression" uuid="__XiJNVuAEe2PMdaNmIFi_Q" expressionString="left CONTAINS (node1, node0, node2)" expressionLanguageID="ICL"/>
+      <constraints xsi:type="mlexpressions:MLStringExpression" uuid="__XiwQluAEe2PMdaNmIFi_Q" expressionString="right CONTAINS (node1, node3, node4)" expressionLanguageID="ICL"/>
+    </pattern>
+  </ownedNodes>
+  <ownedNodes>
+    <dependencies node="//@ownedNodes.6" indexConstraint="__XjXUFuAEe2PMdaNmIFi_Q">
+      <mappings parentVertex="__Xfs8FuAEe2PMdaNmIFi_Q" childVertex="__XiwRFuAEe2PMdaNmIFi_Q"/>
+      <mappings parentVertex="__Xfs8VuAEe2PMdaNmIFi_Q" childVertex="__XiwRVuAEe2PMdaNmIFi_Q" indexPosition="1"/>
+    </dependencies>
+    <dependencies node="//@ownedNodes.4" indexConstraint="__XjXUVuAEe2PMdaNmIFi_Q" negative="true">
+      <mappings parentVertex="__ClM4FuAEe2PMdaNmIFi_Q"/>
+      <mappings parentVertex="__ClM4VuAEe2PMdaNmIFi_Q" childVertex="__XiwRFuAEe2PMdaNmIFi_Q"/>
+    </dependencies>
+    <pattern uuid="__XiwQ1uAEe2PMdaNmIFi_Q" name="Interactive_4_NGC_NESTED.1.2.1.2.1">
+      <storyPatternObjects xsi:type="mlstorypatterns:StoryPatternObject" uuid="__XiwRFuAEe2PMdaNmIFi_Q" name="node0" bindingType="CAN_BE_BOUND">
+        <type xsi:type="ecore:EClass" href="de.mdelab.ldbc_snb#//Post"/>
+      </storyPatternObjects>
+      <storyPatternObjects xsi:type="mlstorypatterns:StoryPatternObject" uuid="__XiwRVuAEe2PMdaNmIFi_Q" name="node1" bindingType="CAN_BE_BOUND">
+        <type xsi:type="ecore:EClass" href="de.mdelab.ldbc_snb#//Tag"/>
+      </storyPatternObjects>
+      <constraints xsi:type="mlexpressions:MLStringExpression" uuid="__XjXUFuAEe2PMdaNmIFi_Q" expressionString="left CONTAINS (node0, node1)" expressionLanguageID="ICL"/>
+      <constraints xsi:type="mlexpressions:MLStringExpression" uuid="__XjXUVuAEe2PMdaNmIFi_Q" expressionString="right EXCLUDES (node0)" expressionLanguageID="ICL"/>
+    </pattern>
+  </ownedNodes>
+  <ownedNodes>
+    <pattern uuid="__Xj-YFuAEe2PMdaNmIFi_Q" name="Interactive_4_NGC_NESTED.1.2.1.2.2.1.1">
+      <storyPatternLinks xsi:type="mlstorypatterns:StoryPatternLink" uuid="__Xj-Y1uAEe2PMdaNmIFi_Q" source="__Xj-YVuAEe2PMdaNmIFi_Q" target="__Xj-YluAEe2PMdaNmIFi_Q">
+        <feature xsi:type="ecore:EReference" href="de.mdelab.ldbc_snb#//Post/successor"/>
+      </storyPatternLinks>
+      <storyPatternObjects xsi:type="mlstorypatterns:StoryPatternObject" uuid="__Xj-YVuAEe2PMdaNmIFi_Q" name="source" outgoingLinks="__Xj-Y1uAEe2PMdaNmIFi_Q" bindingType="CAN_BE_BOUND">
+        <type xsi:type="ecore:EClass" href="de.mdelab.ldbc_snb#//Post"/>
+      </storyPatternObjects>
+      <storyPatternObjects xsi:type="mlstorypatterns:StoryPatternObject" uuid="__Xj-YluAEe2PMdaNmIFi_Q" name="target" incomingLinks="__Xj-Y1uAEe2PMdaNmIFi_Q" bindingType="CAN_BE_BOUND">
+        <type xsi:type="ecore:EClass" href="de.mdelab.ldbc_snb#//Post"/>
+      </storyPatternObjects>
+    </pattern>
+  </ownedNodes>
+  <ownedNodes>
+    <dependencies node="//@ownedNodes.11" indexConstraint="__XklcVuAEe2PMdaNmIFi_Q">
+      <mappings parentVertex="__Xj-YVuAEe2PMdaNmIFi_Q" childVertex="__Xj-ZVuAEe2PMdaNmIFi_Q" indexPosition="1"/>
+      <mappings parentVertex="__Xj-YluAEe2PMdaNmIFi_Q" childVertex="__XklcFuAEe2PMdaNmIFi_Q"/>
+    </dependencies>
+    <dependencies node="//@ownedNodes.4" indexConstraint="__XklcluAEe2PMdaNmIFi_Q" negative="true">
+      <mappings parentVertex="__ClM4FuAEe2PMdaNmIFi_Q"/>
+      <mappings parentVertex="__ClM4VuAEe2PMdaNmIFi_Q" childVertex="__XklcFuAEe2PMdaNmIFi_Q"/>
+    </dependencies>
+    <pattern uuid="__Xj-ZFuAEe2PMdaNmIFi_Q" name="Interactive_4_NGC_NESTED.1.2.1.2.2.1">
+      <storyPatternObjects xsi:type="mlstorypatterns:StoryPatternObject" uuid="__Xj-ZVuAEe2PMdaNmIFi_Q" name="node0" bindingType="CAN_BE_BOUND">
+        <type xsi:type="ecore:EClass" href="de.mdelab.ldbc_snb#//Post"/>
+      </storyPatternObjects>
+      <storyPatternObjects xsi:type="mlstorypatterns:StoryPatternObject" uuid="__XklcFuAEe2PMdaNmIFi_Q" name="node1" bindingType="CAN_BE_BOUND">
+        <type xsi:type="ecore:EClass" href="de.mdelab.ldbc_snb#//Post"/>
+      </storyPatternObjects>
+      <constraints xsi:type="mlexpressions:MLStringExpression" uuid="__XklcVuAEe2PMdaNmIFi_Q" expressionString="left CONTAINS (node1, node0)" expressionLanguageID="ICL"/>
+      <constraints xsi:type="mlexpressions:MLStringExpression" uuid="__XklcluAEe2PMdaNmIFi_Q" expressionString="right EXCLUDES (node1)" expressionLanguageID="ICL"/>
+    </pattern>
+  </ownedNodes>
+  <ownedNodes>
+    <dependencies node="//@ownedNodes.3" indexConstraint="__XkldluAEe2PMdaNmIFi_Q">
+      <mappings parentVertex="_8kTMkFuAEe2PMdaNmIFi_Q" childVertex="__XkldFuAEe2PMdaNmIFi_Q" indexPosition="1"/>
+      <mappings parentVertex="_-roFcFuAEe2PMdaNmIFi_Q" childVertex="__XkldVuAEe2PMdaNmIFi_Q"/>
+    </dependencies>
+    <dependencies node="//@ownedNodes.4" indexConstraint="__Xkld1uAEe2PMdaNmIFi_Q" negative="true">
+      <mappings parentVertex="__ClM4FuAEe2PMdaNmIFi_Q"/>
+      <mappings parentVertex="__ClM4VuAEe2PMdaNmIFi_Q" childVertex="__XkldVuAEe2PMdaNmIFi_Q"/>
+    </dependencies>
+    <pattern uuid="__Xklc1uAEe2PMdaNmIFi_Q" name="Interactive_4_NGC_NESTED.1.2.1.2.2.2">
+      <storyPatternObjects xsi:type="mlstorypatterns:StoryPatternObject" uuid="__XkldFuAEe2PMdaNmIFi_Q" name="node0" bindingType="CAN_BE_BOUND">
+        <type xsi:type="ecore:EClass" href="de.mdelab.ldbc_snb#//Person"/>
+      </storyPatternObjects>
+      <storyPatternObjects xsi:type="mlstorypatterns:StoryPatternObject" uuid="__XkldVuAEe2PMdaNmIFi_Q" name="node1" bindingType="CAN_BE_BOUND">
+        <type xsi:type="ecore:EClass" href="de.mdelab.ldbc_snb#//Post"/>
+      </storyPatternObjects>
+      <constraints xsi:type="mlexpressions:MLStringExpression" uuid="__XkldluAEe2PMdaNmIFi_Q" expressionString="left CONTAINS (node1, node0)" expressionLanguageID="ICL"/>
+      <constraints xsi:type="mlexpressions:MLStringExpression" uuid="__Xkld1uAEe2PMdaNmIFi_Q" expressionString="right EXCLUDES (node1)" expressionLanguageID="ICL"/>
+    </pattern>
+  </ownedNodes>
+  <ownedNodes>
+    <dependencies node="//@ownedNodes.12" indexConstraint="__Xkle1uAEe2PMdaNmIFi_Q">
+      <mappings parentVertex="__Xj-ZVuAEe2PMdaNmIFi_Q" childVertex="__XkleVuAEe2PMdaNmIFi_Q" indexPosition="1"/>
+      <mappings parentVertex="__XklcFuAEe2PMdaNmIFi_Q" childVertex="__XkleluAEe2PMdaNmIFi_Q"/>
+    </dependencies>
+    <dependencies node="//@ownedNodes.13" indexConstraint="__XklfVuAEe2PMdaNmIFi_Q">
+      <mappings parentVertex="__XkldFuAEe2PMdaNmIFi_Q" childVertex="__XklfFuAEe2PMdaNmIFi_Q" indexPosition="1"/>
+      <mappings parentVertex="__XkldVuAEe2PMdaNmIFi_Q" childVertex="__XkleluAEe2PMdaNmIFi_Q"/>
+    </dependencies>
+    <pattern uuid="__XkleFuAEe2PMdaNmIFi_Q" name="Interactive_4_NGC_NESTED.1.2.1.2.2">
+      <storyPatternObjects xsi:type="mlstorypatterns:StoryPatternObject" uuid="__XkleVuAEe2PMdaNmIFi_Q" name="node0" bindingType="CAN_BE_BOUND">
+        <type xsi:type="ecore:EClass" href="de.mdelab.ldbc_snb#//Post"/>
+      </storyPatternObjects>
+      <storyPatternObjects xsi:type="mlstorypatterns:StoryPatternObject" uuid="__XkleluAEe2PMdaNmIFi_Q" name="node1" bindingType="CAN_BE_BOUND">
+        <type xsi:type="ecore:EClass" href="de.mdelab.ldbc_snb#//Post"/>
+      </storyPatternObjects>
+      <storyPatternObjects xsi:type="mlstorypatterns:StoryPatternObject" uuid="__XklfFuAEe2PMdaNmIFi_Q" name="node2" bindingType="CAN_BE_BOUND">
+        <type xsi:type="ecore:EClass" href="de.mdelab.ldbc_snb#//Person"/>
+      </storyPatternObjects>
+      <constraints xsi:type="mlexpressions:MLStringExpression" uuid="__Xkle1uAEe2PMdaNmIFi_Q" expressionString="left CONTAINS (node1, node0)" expressionLanguageID="ICL"/>
+      <constraints xsi:type="mlexpressions:MLStringExpression" uuid="__XklfVuAEe2PMdaNmIFi_Q" expressionString="right CONTAINS (node1, node2)" expressionLanguageID="ICL"/>
+    </pattern>
+  </ownedNodes>
+  <ownedNodes>
+    <dependencies node="//@ownedNodes.10" indexConstraint="__XlMg1uAEe2PMdaNmIFi_Q">
+      <mappings parentVertex="__XiwRFuAEe2PMdaNmIFi_Q" childVertex="__XlMgVuAEe2PMdaNmIFi_Q"/>
+      <mappings parentVertex="__XiwRVuAEe2PMdaNmIFi_Q" childVertex="__XlMgluAEe2PMdaNmIFi_Q" indexPosition="1"/>
+    </dependencies>
+    <dependencies node="//@ownedNodes.14" indexConstraint="__XlMhluAEe2PMdaNmIFi_Q">
+      <mappings parentVertex="__XkleVuAEe2PMdaNmIFi_Q" childVertex="__XlMhFuAEe2PMdaNmIFi_Q" indexPosition="1"/>
+      <mappings parentVertex="__XkleluAEe2PMdaNmIFi_Q" childVertex="__XlMgVuAEe2PMdaNmIFi_Q"/>
+      <mappings parentVertex="__XklfFuAEe2PMdaNmIFi_Q" childVertex="__XlMhVuAEe2PMdaNmIFi_Q" indexPosition="2"/>
+    </dependencies>
+    <pattern uuid="__XlMgFuAEe2PMdaNmIFi_Q" name="Interactive_4_NGC_NESTED.1.2.1.2">
+      <storyPatternObjects xsi:type="mlstorypatterns:StoryPatternObject" uuid="__XlMgVuAEe2PMdaNmIFi_Q" name="node0" bindingType="CAN_BE_BOUND">
+        <type xsi:type="ecore:EClass" href="de.mdelab.ldbc_snb#//Post"/>
+      </storyPatternObjects>
+      <storyPatternObjects xsi:type="mlstorypatterns:StoryPatternObject" uuid="__XlMgluAEe2PMdaNmIFi_Q" name="node1" bindingType="CAN_BE_BOUND">
+        <type xsi:type="ecore:EClass" href="de.mdelab.ldbc_snb#//Tag"/>
+      </storyPatternObjects>
+      <storyPatternObjects xsi:type="mlstorypatterns:StoryPatternObject" uuid="__XlMhFuAEe2PMdaNmIFi_Q" name="node2" bindingType="CAN_BE_BOUND">
+        <type xsi:type="ecore:EClass" href="de.mdelab.ldbc_snb#//Post"/>
+      </storyPatternObjects>
+      <storyPatternObjects xsi:type="mlstorypatterns:StoryPatternObject" uuid="__XlMhVuAEe2PMdaNmIFi_Q" name="node3" bindingType="CAN_BE_BOUND">
+        <type xsi:type="ecore:EClass" href="de.mdelab.ldbc_snb#//Person"/>
+      </storyPatternObjects>
+      <constraints xsi:type="mlexpressions:MLStringExpression" uuid="__XlMg1uAEe2PMdaNmIFi_Q" expressionString="left CONTAINS (node0, node1)" expressionLanguageID="ICL"/>
+      <constraints xsi:type="mlexpressions:MLStringExpression" uuid="__XlMhluAEe2PMdaNmIFi_Q" expressionString="right CONTAINS (node0, node2, node3)" expressionLanguageID="ICL"/>
+    </pattern>
+  </ownedNodes>
+  <ownedNodes>
+    <dependencies node="//@ownedNodes.2" indexConstraint="__XlMi1uAEe2PMdaNmIFi_Q">
+      <mappings parentVertex="_yB49wFuAEe2PMdaNmIFi_Q" childVertex="__XlMiFuAEe2PMdaNmIFi_Q" indexPosition="1"/>
+      <mappings parentVertex="_yB9PMFuAEe2PMdaNmIFi_Q" childVertex="__XlMiVuAEe2PMdaNmIFi_Q"/>
+      <mappings parentVertex="_yB_rcVuAEe2PMdaNmIFi_Q" childVertex="__XlMiluAEe2PMdaNmIFi_Q" indexPosition="2"/>
+    </dependencies>
+    <dependencies node="//@ownedNodes.15" indexConstraint="__XlMj1uAEe2PMdaNmIFi_Q">
+      <mappings parentVertex="__XlMgVuAEe2PMdaNmIFi_Q" childVertex="__XlMjFuAEe2PMdaNmIFi_Q" indexPosition="1"/>
+      <mappings parentVertex="__XlMgluAEe2PMdaNmIFi_Q" childVertex="__XlMjVuAEe2PMdaNmIFi_Q" indexPosition="2"/>
+      <mappings parentVertex="__XlMhFuAEe2PMdaNmIFi_Q" childVertex="__XlMjluAEe2PMdaNmIFi_Q" indexPosition="3"/>
+      <mappings parentVertex="__XlMhVuAEe2PMdaNmIFi_Q" childVertex="__XlMiVuAEe2PMdaNmIFi_Q"/>
+    </dependencies>
+    <pattern uuid="__XlMh1uAEe2PMdaNmIFi_Q" name="Interactive_4_NGC_NESTED.1.2.1">
+      <storyPatternObjects xsi:type="mlstorypatterns:StoryPatternObject" uuid="__XlMiFuAEe2PMdaNmIFi_Q" name="node0" bindingType="CAN_BE_BOUND">
+        <type xsi:type="ecore:EClass" href="de.mdelab.ldbc_snb#//KnowsLink"/>
+      </storyPatternObjects>
+      <storyPatternObjects xsi:type="mlstorypatterns:StoryPatternObject" uuid="__XlMiVuAEe2PMdaNmIFi_Q" name="node1" bindingType="CAN_BE_BOUND">
+        <type xsi:type="ecore:EClass" href="de.mdelab.ldbc_snb#//Person"/>
+      </storyPatternObjects>
+      <storyPatternObjects xsi:type="mlstorypatterns:StoryPatternObject" uuid="__XlMiluAEe2PMdaNmIFi_Q" name="node2" bindingType="CAN_BE_BOUND">
+        <type xsi:type="ecore:EClass" href="de.mdelab.ldbc_snb#//Person"/>
+      </storyPatternObjects>
+      <storyPatternObjects xsi:type="mlstorypatterns:StoryPatternObject" uuid="__XlMjFuAEe2PMdaNmIFi_Q" name="node3" bindingType="CAN_BE_BOUND">
+        <type xsi:type="ecore:EClass" href="de.mdelab.ldbc_snb#//Post"/>
+      </storyPatternObjects>
+      <storyPatternObjects xsi:type="mlstorypatterns:StoryPatternObject" uuid="__XlMjVuAEe2PMdaNmIFi_Q" name="node4" bindingType="CAN_BE_BOUND">
+        <type xsi:type="ecore:EClass" href="de.mdelab.ldbc_snb#//Tag"/>
+      </storyPatternObjects>
+      <storyPatternObjects xsi:type="mlstorypatterns:StoryPatternObject" uuid="__XlMjluAEe2PMdaNmIFi_Q" name="node5" bindingType="CAN_BE_BOUND">
+        <type xsi:type="ecore:EClass" href="de.mdelab.ldbc_snb#//Post"/>
+      </storyPatternObjects>
+      <constraints xsi:type="mlexpressions:MLStringExpression" uuid="__XlMi1uAEe2PMdaNmIFi_Q" expressionString="left CONTAINS (node1, node0, node2)" expressionLanguageID="ICL"/>
+      <constraints xsi:type="mlexpressions:MLStringExpression" uuid="__XlMj1uAEe2PMdaNmIFi_Q" expressionString="right CONTAINS (node1, node3, node4, node5)" expressionLanguageID="ICL"/>
+    </pattern>
+  </ownedNodes>
+  <ownedNodes>
+    <dependencies node="//@ownedNodes.9" indexConstraint="__XlMlluAEe2PMdaNmIFi_Q">
+      <mappings parentVertex="__XiJMluAEe2PMdaNmIFi_Q" childVertex="__XlMkVuAEe2PMdaNmIFi_Q" indexPosition="3"/>
+      <mappings parentVertex="__XiJM1uAEe2PMdaNmIFi_Q" childVertex="__XlMkluAEe2PMdaNmIFi_Q" indexPosition="4"/>
+      <mappings parentVertex="__XiJNFuAEe2PMdaNmIFi_Q" childVertex="__XlMk1uAEe2PMdaNmIFi_Q"/>
+      <mappings parentVertex="__XiwQFuAEe2PMdaNmIFi_Q" childVertex="__XlMlFuAEe2PMdaNmIFi_Q" indexPosition="1"/>
+      <mappings parentVertex="__XiwQVuAEe2PMdaNmIFi_Q" childVertex="__XlMlVuAEe2PMdaNmIFi_Q" indexPosition="2"/>
+    </dependencies>
+    <dependencies node="//@ownedNodes.16" indexConstraint="__XlMl1uAEe2PMdaNmIFi_Q" negative="true">
+      <mappings parentVertex="__XlMiFuAEe2PMdaNmIFi_Q"/>
+      <mappings parentVertex="__XlMiVuAEe2PMdaNmIFi_Q" indexPosition="1"/>
+      <mappings parentVertex="__XlMiluAEe2PMdaNmIFi_Q" childVertex="__XlMk1uAEe2PMdaNmIFi_Q"/>
+      <mappings parentVertex="__XlMjFuAEe2PMdaNmIFi_Q" indexPosition="3"/>
+      <mappings parentVertex="__XlMjVuAEe2PMdaNmIFi_Q" childVertex="__XlMlVuAEe2PMdaNmIFi_Q" indexPosition="1"/>
+      <mappings parentVertex="__XlMjluAEe2PMdaNmIFi_Q" childVertex="__XlMlFuAEe2PMdaNmIFi_Q" indexPosition="2"/>
+    </dependencies>
+    <pattern uuid="__XlMkFuAEe2PMdaNmIFi_Q" name="Interactive_4_NGC_NESTED.1">
+      <storyPatternObjects xsi:type="mlstorypatterns:StoryPatternObject" uuid="__XlMkVuAEe2PMdaNmIFi_Q" name="node0" bindingType="CAN_BE_BOUND">
+        <type xsi:type="ecore:EClass" href="de.mdelab.ldbc_snb#//KnowsLink"/>
+      </storyPatternObjects>
+      <storyPatternObjects xsi:type="mlstorypatterns:StoryPatternObject" uuid="__XlMkluAEe2PMdaNmIFi_Q" name="node1" bindingType="CAN_BE_BOUND">
+        <type xsi:type="ecore:EClass" href="de.mdelab.ldbc_snb#//Person"/>
+      </storyPatternObjects>
+      <storyPatternObjects xsi:type="mlstorypatterns:StoryPatternObject" uuid="__XlMk1uAEe2PMdaNmIFi_Q" name="node2" bindingType="CAN_BE_BOUND">
+        <type xsi:type="ecore:EClass" href="de.mdelab.ldbc_snb#//Person"/>
+      </storyPatternObjects>
+      <storyPatternObjects xsi:type="mlstorypatterns:StoryPatternObject" uuid="__XlMlFuAEe2PMdaNmIFi_Q" name="node3" bindingType="CAN_BE_BOUND">
+        <type xsi:type="ecore:EClass" href="de.mdelab.ldbc_snb#//Post"/>
+      </storyPatternObjects>
+      <storyPatternObjects xsi:type="mlstorypatterns:StoryPatternObject" uuid="__XlMlVuAEe2PMdaNmIFi_Q" name="node4" bindingType="CAN_BE_BOUND">
+        <type xsi:type="ecore:EClass" href="de.mdelab.ldbc_snb#//Tag"/>
+      </storyPatternObjects>
+      <constraints xsi:type="mlexpressions:MLStringExpression" uuid="__XlMlluAEe2PMdaNmIFi_Q" expressionString="left CONTAINS (node2, node3, node4, node0, node1)" expressionLanguageID="ICL"/>
+      <constraints xsi:type="mlexpressions:MLStringExpression" uuid="__XlMl1uAEe2PMdaNmIFi_Q" expressionString="right EXCLUDES (node2, node4, node3)" expressionLanguageID="ICL"/>
+    </pattern>
+  </ownedNodes>
+</gdn:GDN>

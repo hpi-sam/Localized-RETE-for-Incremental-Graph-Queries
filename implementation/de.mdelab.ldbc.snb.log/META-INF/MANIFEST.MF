@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Log
+Bundle-SymbolicName: de.mdelab.ldbc.snb.log
+Bundle-Version: 1.0.0.qualifier
+Export-Package: de.mdelab.ldbc_snb.log,
+ de.mdelab.ldbc_snb.log.elements
+Require-Bundle: org.eclipse.emf.ecore,
+ de.mdelab.ldbc.snb;bundle-version="1.0.0",
+ de.mdelab.mlsdm.interpreter.searchModel

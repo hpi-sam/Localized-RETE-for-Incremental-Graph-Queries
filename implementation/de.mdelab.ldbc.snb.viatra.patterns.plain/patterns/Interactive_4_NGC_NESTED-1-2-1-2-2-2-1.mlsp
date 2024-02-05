@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="ASCII"?>
+<mlstorypatterns:StoryPattern xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:mlstorypatterns="http://www.mdelab.de/mlstorypatterns/1.0" uuid="_J73K9lt-Ee2he9fFLVXnAg" name="Interactive_4_NGC_NESTED.1.2.1.2.2.2.1">
+  <storyPatternLinks xsi:type="mlstorypatterns:StoryPatternLink" uuid="_J73K-Vt-Ee2he9fFLVXnAg" source="_J73K91t-Ee2he9fFLVXnAg" target="_J73K-Ft-Ee2he9fFLVXnAg">
+    <feature xsi:type="ecore:EReference" href="de.mdelab.ldbc_snb#//Post/successor"/>
+  </storyPatternLinks>
+  <storyPatternObjects xsi:type="mlstorypatterns:StoryPatternObject" uuid="_J73K91t-Ee2he9fFLVXnAg" name="source" outgoingLinks="_J73K-Vt-Ee2he9fFLVXnAg" bindingType="CAN_BE_BOUND">
+    <type xsi:type="ecore:EClass" href="de.mdelab.ldbc_snb#//Post"/>
+  </storyPatternObjects>
+  <storyPatternObjects xsi:type="mlstorypatterns:StoryPatternObject" uuid="_J73K-Ft-Ee2he9fFLVXnAg" name="target" incomingLinks="_J73K-Vt-Ee2he9fFLVXnAg" bindingType="CAN_BE_BOUND">
+    <type xsi:type="ecore:EClass" href="de.mdelab.ldbc_snb#//Post"/>
+  </storyPatternObjects>
+</mlstorypatterns:StoryPattern>
