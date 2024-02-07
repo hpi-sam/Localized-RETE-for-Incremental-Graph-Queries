@@ -13,3 +13,4 @@ Replication
 - query specification for all strategies except for VIATRA can be found in the corresponding patterns directory
 - metadata required for RETE net construction can be found in the corresponding data directory
 - data for the experiments on real abstract syntax graphs (split into two parts due to GitHub's file size limit) and the LDBC SNB can be found in the corresponding data directory; data for the experiments on synthetic syntax graphs is generated programmatically
+- before executing memory measurements for the CDO variant of the synthetic Java scenario, a CDO resource containing the desired model has to be created via the provided .jar file

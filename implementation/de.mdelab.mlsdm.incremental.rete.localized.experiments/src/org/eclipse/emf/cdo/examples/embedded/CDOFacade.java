@@ -113,7 +113,7 @@ public final class CDOFacade extends EmbeddedH2Repository
   {
     return nsURI.equals("http://www.eclipse.org/emf/CDO/examples/company/1.0.0");
   }
-
+ 
   @Override
   protected void doActivate() throws Exception
   {

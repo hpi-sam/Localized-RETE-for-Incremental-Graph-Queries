@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.util.List;
 
 import org.eclipse.emf.cdo.eresource.CDOResource;
+import org.eclipse.emf.cdo.eresource.EresourcePackage;
 import org.eclipse.emf.cdo.examples.embedded.CDOFacade;
 import org.eclipse.emf.cdo.transaction.CDOTransaction;
 import org.eclipse.emf.cdo.util.CommitException;
@@ -40,7 +41,9 @@ public abstract class CDOExperiment<SourceModelType, Query> extends Experiment<L
 	public void performExperiment(String modelFile, String queryURI, String resourceURI) {
 		registerEPackages();
 		
-		setUpResource(resourceURI, readModel(modelFile));
+		if(!measureMemory) {
+			setUpResource(resourceURI, readModel(modelFile));
+		}
 
 		CDOFacade.INSTANCE.activate();
 		startTransaction();
@@ -104,6 +107,13 @@ public abstract class CDOExperiment<SourceModelType, Query> extends Experiment<L
 			}
 		}
 		file.delete();
+	}
+
+	@Override
+	protected void registerEPackages() {
+		super.registerEPackages();
+		
+		EresourcePackage.eINSTANCE.getName();
 	}
 
 //	public void performExperiment(String modelFile, String queryURI, String resourceURI) {
